@@ -17,3 +17,10 @@ C:\Users\Elektro\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBC
 C:\Users\Elektro\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.csproj.GenerateResource.Cache
 C:\Users\Elektro\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.exe
 C:\Users\Elektro\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.pdb
+C:\Users\Lovro\Source\Repos\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.csprojResolveAssemblyReference.cache
+C:\Users\Lovro\Source\Repos\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.Form1.resources
+C:\Users\Lovro\Source\Repos\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.Properties.Resources.resources
+C:\Users\Lovro\Source\Repos\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.csproj.GenerateResource.Cache
+C:\Users\Lovro\Source\Repos\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.csproj.CoreCompileInputs.cache
+C:\Users\Lovro\Source\Repos\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.exe
+C:\Users\Lovro\Source\Repos\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.pdb

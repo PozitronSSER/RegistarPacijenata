@@ -8,13 +8,24 @@ namespace KBCRijekaKantridaRegistar
 {
     class Pacijent
     {
-        public string ImePacijenta;
-        public string PrezimePacijenta;
-        public static int Id;
+        public string imePacijenta;
+        public string prezimePacijenta;
+        public static int id;
+
+        public override string ToString()
+        {
+            return imePacijenta + " " + prezimePacijenta + "Id: " + id;
+        }
+        public Pacijent(string ime, string prezime)
+        {
+            imePacijenta = ime;
+            prezimePacijenta = prezime;
+            id++;
+        }
+
         /*
          * nisam baš siguran da je ovo dobar pristup...
-         * 
-         * 
+         
         string ime, prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,
             apgarIndeks, trajanjePoroda;
         string[] patologijaTrudnoce = new string[6];
@@ -43,15 +54,6 @@ namespace KBCRijekaKantridaRegistar
             trajanjePoroda = TrajanjePoroda;
         }
         */
-        public override string ToString()
-        {
-            return ImePacijenta + " " + PrezimePacijenta;
-        }
-        public Pacijent(string ime, string prezime)
-        {
-            ImePacijenta = ime;
-            PrezimePacijenta = prezime;
-            Id++;
-        }
+        
     }
 }
