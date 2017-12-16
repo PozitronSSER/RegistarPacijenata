@@ -16,6 +16,9 @@ namespace KBCRijekaKantridaRegistar
         {
             return imePacijenta + " " + prezimePacijenta + "Id: " + id;
         }
+
+        // probni konstruktor
+
         public Pacijent(string ime, string prezime)
         {
             imePacijenta = ime;
