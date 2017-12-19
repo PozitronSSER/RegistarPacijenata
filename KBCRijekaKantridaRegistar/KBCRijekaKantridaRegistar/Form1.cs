@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+using System.Xml.Linq;
 using System.Windows.Forms;
 using System.Xml;
+using System.Linq;
+using System.IO;
+using System.Collections.Generic;
 
 namespace KBCRijekaKantridaRegistar
 {
@@ -39,8 +35,6 @@ namespace KBCRijekaKantridaRegistar
             //prebacivanje podataka u xml
 
 
-            XmlDocument doc = new XmlDocument(); 
-
             /*
              * mislim da bi trebali napraviti provjeru da li postoji "naš" XML dokument
              *  if (!exists)
@@ -51,21 +45,23 @@ namespace KBCRijekaKantridaRegistar
 
             ///////////////////////////////////////////////////////////
             
-            /* ovo je neki primjer sa StackOverFlow-a
+            /* ovo je neki primjer sa StackOverFlow-a */
+
+            // izmjenio podatke (naziv xml dokumenta, root element i ostale elemente
             
-            if (!File.Exists("Test.xml"))
+            if (!File.Exists("Registar.xml"))
                {
                     XmlWriterSettings xmlWriterSettings = new XmlWriterSettings();
                     xmlWriterSettings.Indent = true;
                     xmlWriterSettings.NewLineOnAttributes = true;
-                    using (XmlWriter xmlWriter = XmlWriter.Create("Test.xml", xmlWriterSettings))
+                    using (XmlWriter xmlWriter = XmlWriter.Create("Registar.xml", xmlWriterSettings))
                     {
                         xmlWriter.WriteStartDocument();
-                        xmlWriter.WriteStartElement("School");
+                        xmlWriter.WriteStartElement("Registar");
 
-                        xmlWriter.WriteStartElement("Student");
-                        xmlWriter.WriteElementString("FirstName", firstName);
-                        xmlWriter.WriteElementString("LastName", lastName);
+                        xmlWriter.WriteStartElement("Pacijent");
+                        xmlWriter.WriteElementString("Ime", pacijent.imePacijenta);
+                        xmlWriter.WriteElementString("Prezime", pacijent.prezimePacijenta);
                         xmlWriter.WriteEndElement();
 
                         xmlWriter.WriteEndElement();
@@ -76,19 +72,20 @@ namespace KBCRijekaKantridaRegistar
             }
             else
             {
-                XDocument xDocument = XDocument.Load("Test.xml");
-                XElement root= xDocument.Element("School");
-                IEnumerable<XElement> rows = root.Descendants("Student");
+                XDocument xDocument = XDocument.Load("Registar.xml");
+                XElement root= xDocument.Element("Registar");
+                IEnumerable <XElement> rows = root.Descendants("Pacijent");
                 XElement firstRow= rows.First();
                 firstRow.AddBeforeSelf(
-                    new XElement("Student",
-                    new XElement("FirstName", firstName),
-                    new XElement("LastName", lastName)));
-                xDocument.Save("Test.xml");
+                    new XElement("Pacijent",
+                    new XElement("Ime", pacijent.imePacijenta),
+                    new XElement("Prezime", pacijent.prezimePacijenta)));
+                xDocument.Save("Registar.xml");
             }
-            */
-            ////////////////////////////////////////////////////////////////////
+            
 
+            /* ovo je stari kod koji ste napravili prije
+             
             doc.LoadXml("<Registar></Registar>");
 
             XmlElement newElem = doc.CreateElement(txtOsnovnipodatciIme.Text);
@@ -97,6 +94,8 @@ namespace KBCRijekaKantridaRegistar
 
             doc.PreserveWhitespace = true;
             doc.Save(txtOsnovnipodatciIme.Text+".xml");
+
+            */
 
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
