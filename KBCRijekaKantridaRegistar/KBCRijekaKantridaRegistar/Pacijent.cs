@@ -1,45 +1,35 @@
 ﻿// uklonio nepotrebne using
 
+using System;
+
 namespace KBCRijekaKantridaRegistar
 {
     class Pacijent
     {
-        public string imePacijenta;
-        public string prezimePacijenta;
-        public static int id;
+        // (1) provjeriti da li su sve varijable u redu
 
-        public override string ToString()
-        {
-            return imePacijenta + " " + prezimePacijenta + "Id: " + id;
-        }
-
-        // probni konstruktor
-
-        public Pacijent(string ime, string prezime)
-        {
-            imePacijenta = ime;
-            prezimePacijenta = prezime;
-            id++;
-        }
-
-        /*
-         * nisam baš siguran da je ovo dobar pristup...
-         
-        string ime, prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,
+        int id, gestacijskaDobTjedana, gestacijskaDobDana, rodnaMasa, rodnaTezina, opsegGlave;;
+        string imePacijenta, prezimePacijenta, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,
             apgarIndeks, trajanjePoroda;
+        
+        // (2) provjeriti da li je dobro koristiti niz, ili ima bolje rješenje
+
         string[] patologijaTrudnoce = new string[6];
         string[] komplikacije = new string[10];
-        int gestacijskaDobTjedana, gestacijskaDobDana, rodnaMasa, rodnaTezina, opsegGlave;
+
         DateTime datumRodenja;
+
+        // (3) provjeriti da li je dobro koristiti bool, ili ima bolje rješenje
+
         bool trudnocaPlodna, trudnocaPrirodna, nacinPoroda, prom, febrilitetRodilje, reanimacija;
         
-        
+        // (4) napraviti konstruktor do kraja tako da kreira sve potrebne podatke u objektu
         public Pacijent(string Ime, string Prezime, string ImeMajke, string ImeOca, string Adresa, string KontaktTelefon,
             string Spol, string ParitetTrudnoce, string StavDjeteta, string Profilaksa, DateTime DatumRodenja, bool TrudnocaPrirodna,
             string TrajanjePoroda)
         {
-            ime = Ime;
-            prezime = Prezime;
+            imePacijenta = Ime;
+            prezimePacijenta = Prezime;
             imeMajke = ImeMajke;
             imeOca = ImeOca;
             adresa = Adresa;
@@ -52,7 +42,7 @@ namespace KBCRijekaKantridaRegistar
             trudnocaPrirodna = TrudnocaPrirodna;
             trajanjePoroda = TrajanjePoroda;
         }
-        */
+        
         
     }
 }
