@@ -16,6 +16,8 @@ namespace KBCRijekaKantridaRegistar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // ovo ćemo najvjerojatnije izmijeniti, kada budemo radili GUI
             Application.Run(new Form1());
 
         }
