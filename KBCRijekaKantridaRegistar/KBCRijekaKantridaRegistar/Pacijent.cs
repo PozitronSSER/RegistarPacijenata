@@ -42,6 +42,8 @@ namespace KBCRijekaKantridaRegistar
             this.TrudnocaPrirodna = TrudnocaPrirodna;
             this.TrajanjePoroda = TrajanjePoroda;
         }
+        
+        // skužio sam kako ovo napraviti automatski, podsjetite me da vam pokažem
 
         public int Id { get => id; set => id = value; }
         public int GestacijskaDobTjedana { get => gestacijskaDobTjedana; set => gestacijskaDobTjedana = value; }
