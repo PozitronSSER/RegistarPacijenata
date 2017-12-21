@@ -12,6 +12,7 @@ namespace KBCRijekaKantridaRegistar
     {
         int brojac = 0;
 
+        // čemu ono ova varijabla? ne sjećam se
         public bool trudnocaPrirodnaSwitch;
 
 
@@ -32,6 +33,8 @@ namespace KBCRijekaKantridaRegistar
 
             
             //prebacivanje podataka u xml
+
+            // (2) prebaciti sve podatke u xml
             
             if (!File.Exists("Registar.xml"))
                {
