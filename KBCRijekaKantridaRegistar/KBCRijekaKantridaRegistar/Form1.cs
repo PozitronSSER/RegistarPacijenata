@@ -26,28 +26,12 @@ namespace KBCRijekaKantridaRegistar
         {
             // kreiranje objekta pacijent
 
+            // (1) napraviti objekt pomoću ispravnog konstruktora
+
             Pacijent pacijent = new Pacijent(txtOsnovnipodatciIme.Text, txtOsnovnipodatciPrezime.Text);
 
-            /* kontrola ispisa u testni txtBox
-            txtTestIspis.Text = pacijent.ToString();
-            */
-
-            //prebacivanje podataka u xml
-
-
-            /*
-             * mislim da bi trebali napraviti provjeru da li postoji "naš" XML dokument
-             *  if (!exists)
-             *      napravi dokument "Registar.xml"
-             *  else
-             *      ne diraj ništa i nahrani kerove
-             */
-
-            ///////////////////////////////////////////////////////////
             
-            /* ovo je neki primjer sa StackOverFlow-a */
-
-            // izmjenio podatke (naziv xml dokumenta, root element i ostale elemente
+            //prebacivanje podataka u xml
             
             if (!File.Exists("Registar.xml"))
                {
@@ -60,8 +44,8 @@ namespace KBCRijekaKantridaRegistar
                         xmlWriter.WriteStartElement("Registar");
 
                         xmlWriter.WriteStartElement("Pacijent");
-                        xmlWriter.WriteElementString("Ime", pacijent.imePacijenta);
-                        xmlWriter.WriteElementString("Prezime", pacijent.prezimePacijenta);
+                        xmlWriter.WriteElementString("Ime", pacijent.ImePacijenta);
+                        xmlWriter.WriteElementString("Prezime", pacijent.PrezimePacijenta);
                         xmlWriter.WriteEndElement();
 
                         xmlWriter.WriteEndElement();
@@ -78,8 +62,8 @@ namespace KBCRijekaKantridaRegistar
                 XElement firstRow= rows.First();
                 firstRow.AddBeforeSelf(
                     new XElement("Pacijent",
-                    new XElement("Ime", pacijent.imePacijenta),
-                    new XElement("Prezime", pacijent.prezimePacijenta)));
+                    new XElement("Ime", pacijent.ImePacijenta),
+                    new XElement("Prezime", pacijent.PrezimePacijenta)));
                 xDocument.Save("Registar.xml");
             }
             
