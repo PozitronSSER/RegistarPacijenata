@@ -8,8 +8,8 @@ namespace KBCRijekaKantridaRegistar
     {
         // (1) provjeriti da li su sve varijable u redu
 
-        int id, gestacijskaDobTjedana, gestacijskaDobDana, rodnaMasa, rodnaTezina, opsegGlave;;
-        string imePacijenta, prezimePacijenta, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,
+        int id, gestacijskaDobTjedana, gestacijskaDobDana, rodnaMasa, rodnaTezina, opsegGlave;
+        string Ime, Prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,
             apgarIndeks, trajanjePoroda;
         
         // (2) provjeriti da li je dobro koristiti niz, ili ima bolje rješenje
@@ -28,8 +28,8 @@ namespace KBCRijekaKantridaRegistar
             string Spol, string ParitetTrudnoce, string StavDjeteta, string Profilaksa, DateTime DatumRodenja, bool TrudnocaPrirodna,
             string TrajanjePoroda)
         {
-            ImePacijenta = Ime;
-            PrezimePacijenta = Prezime;
+            this.Ime = Ime;
+            this.Prezime = Prezime;
             this.ImeMajke = ImeMajke;
             this.ImeOca = ImeOca;
             this.Adresa = Adresa;
@@ -51,8 +51,8 @@ namespace KBCRijekaKantridaRegistar
         public int RodnaMasa { get => rodnaMasa; set => rodnaMasa = value; }
         public int RodnaTezina { get => rodnaTezina; set => rodnaTezina = value; }
         public int OpsegGlave { get => opsegGlave; set => opsegGlave = value; }
-        public string ImePacijenta { get => imePacijenta; set => imePacijenta = value; }
-        public string PrezimePacijenta { get => prezimePacijenta; set => prezimePacijenta = value; }
+        public string ImePacijenta { get => Ime; set => Ime = value; }
+        public string PrezimePacijenta { get => Prezime; set => Prezime = value; }
         public string ImeMajke { get => imeMajke; set => imeMajke = value; }
         public string ImeOca { get => imeOca; set => imeOca = value; }
         public string Adresa { get => adresa; set => adresa = value; }
