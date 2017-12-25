@@ -7,6 +7,16 @@ using System.IO;
 using System.Collections.Generic;
 
 namespace KBCRijekaKantridaRegistar
+
+    /*
+     @Karlo-Graf 
+     Što se tiče prebacivanja podataka u XML, možda bi bilo dobro spremiti podatke sa forme u "prijelazne" varijable, 
+     jer mi se čini da ćemo imati više formi za upis podataka, 
+     pa da ne radimo akrobacije sa izradom objekta (npr. string imePacijentaUnos = txtOsnovnipodatciIme.Text;).
+     Na taj način onda u konstruktoru koristimo te varijable kao argumente,
+     umjesto Text svojstva neke kontrole na nekoj formi. 
+     If you know what I mean.
+    */
 {
     public partial class Form1 : Form
     {
