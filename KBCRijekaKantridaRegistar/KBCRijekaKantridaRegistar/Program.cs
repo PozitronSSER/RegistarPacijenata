@@ -18,7 +18,7 @@ namespace KBCRijekaKantridaRegistar
             Application.SetCompatibleTextRenderingDefault(false);
 
             // ovo ćemo najvjerojatnije izmijeniti, kada budemo radili GUI
-            Application.Run(new Form1());
+            Application.Run(new Pocetna());
 
         }
     }

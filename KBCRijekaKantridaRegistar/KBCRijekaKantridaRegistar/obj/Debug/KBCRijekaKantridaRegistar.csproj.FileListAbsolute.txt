@@ -54,3 +54,6 @@ C:\Users\Lovro\Source\Repos\RegistarPacijenata2\KBCRijekaKantridaRegistar\KBCRij
 C:\Users\Lovro\Source\Repos\RegistarPacijenata2\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.csproj.CoreCompileInputs.cache
 C:\Users\Lovro\Source\Repos\RegistarPacijenata2\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.exe
 C:\Users\Lovro\Source\Repos\RegistarPacijenata2\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.pdb
+C:\Users\Lovro\Source\Repos\RegistarPacijenata2\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.GUI.OsnovniPodaci.resources
+C:\Users\Lovro\Source\Repos\RegistarPacijenata2\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.GUI.Pocetna.resources
+C:\Users\Lovro\Source\Repos\RegistarPacijenata2\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.GUI.Trudnoca.resources

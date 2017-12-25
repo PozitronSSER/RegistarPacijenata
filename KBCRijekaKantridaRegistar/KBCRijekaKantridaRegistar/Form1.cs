@@ -22,6 +22,11 @@ namespace KBCRijekaKantridaRegistar
     {
         int brojac = 0;
 
+        // javne varijable
+        public string ime, prezime, imeOca, imeMajke, adresa, telefon, spol;
+        public DateTime datumRodjenja;
+
+
         // čemu ono ova varijabla? ne sjećam se
         public bool trudnocaPrirodnaSwitch;
 
@@ -70,10 +75,10 @@ namespace KBCRijekaKantridaRegistar
 
             // (1) napraviti objekt pomoću ispravnog konstruktora
 
-            Pacijent pacijent = new Pacijent(txtOsnovnipodatciIme.Text, txtOsnovnipodatciPrezime.Text, txtOsnovnipodatciImemajke.Text,
-                txtOsnovnipodatciImeoca.Text, txtOsnovnipodatciAdresa.Text, txtOsnovnipodatciKontakttelefon.Text,
-                txtOsnovnipodatciSpol.Text, txtTrudnoćaParitet.Text, txtPorodStavdjeteta.Text, txtPorodKortikosteroidnaprofilaksa.Text,
-                Convert.ToDateTime(txtOsnovnipodatciDatumrođenja.Text), rbtnTrunocaPrirodna.Checked, txtPorodTrajanjeporoda.Text);
+            Pacijent pacijent = new Pacijent(ime, prezime, imeMajke,
+                imeOca, adresa, telefon, spol,
+                txtTrudnoćaParitet.Text, txtPorodStavdjeteta.Text, txtPorodKortikosteroidnaprofilaksa.Text,
+                datumRodjenja, rbtnTrunocaPrirodna.Checked, txtPorodTrajanjeporoda.Text);
 
             //prebacivanje podataka u xml
 
@@ -163,22 +168,7 @@ namespace KBCRijekaKantridaRegistar
 
                 xDocument.Save("Registar.xml");
             }
-
-
-            /* ovo je stari kod koji ste napravili prije
-             
-            doc.LoadXml("<Registar></Registar>");
-
-            XmlElement newElem = doc.CreateElement(txtOsnovnipodatciIme.Text);
-            newElem.InnerText = Convert.ToString(Pacijent.Id);
-            doc.DocumentElement.AppendChild(newElem);
-
-            doc.PreserveWhitespace = true;
-            doc.Save(txtOsnovnipodatciIme.Text+".xml");
-
-            */
-
-
+            
             //čistimo podatke nakon unosa
 
             txtGestacijskadobDana.Clear();
@@ -188,14 +178,6 @@ namespace KBCRijekaKantridaRegistar
             txtNovorodenceRodnaduljina.Clear();
             txtNovorodenceRodnamasa.Clear();
             txtNovorođenčeKomplikacijeOstalo.Clear();
-            txtOsnovnipodatciAdresa.Clear();
-            txtOsnovnipodatciDatumrođenja.ResetText();
-            txtOsnovnipodatciIme.Clear();
-            txtOsnovnipodatciImemajke.Clear();
-            txtOsnovnipodatciImeoca.Clear();
-            txtOsnovnipodatciKontakttelefon.Clear();
-            txtOsnovnipodatciPrezime.Clear();
-            txtOsnovnipodatciSpol.ResetText();
             txtPatologijaTrudnoćeOstalo.Clear();
             txtPorodKortikosteroidnaprofilaksa.ResetText();
             txtPorodStavdjeteta.ResetText();
