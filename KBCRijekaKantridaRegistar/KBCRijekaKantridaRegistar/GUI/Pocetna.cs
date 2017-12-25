@@ -12,14 +12,19 @@ namespace KBCRijekaKantridaRegistar.GUI
 {
     public partial class Pocetna : Form
     {
+        
+
         public Pocetna()
         {
             InitializeComponent();
+            
         }
 
-        private void btnUnosPacijenta_Click(object sender, EventArgs e)
+        public void btnUnosPacijenta_Click(object sender, EventArgs e)
         {
-            Buffer unos = new Buffer();
+            OsnovniPodaci unosPodataka = new OsnovniPodaci();
+            unosPodataka.Show();
+            this.Hide();
         }
     }
 }

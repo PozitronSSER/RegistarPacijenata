@@ -235,6 +235,7 @@
             this.Controls.Add(this.label1);
             this.Name = "OsnovniPodaci";
             this.Text = "Osnovni podatci pacijenta";
+            this.Load += new System.EventHandler(this.OsnovniPodaci_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -16,9 +16,15 @@ namespace KBCRijekaKantridaRegistar.GUI
         {
             InitializeComponent();
         }
-
-        private void btnDaljeOsnovniPodaci_Click(object sender, EventArgs e)
+        public void OsnovniPodaci_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        public void btnDaljeOsnovniPodaci_Click(object sender, EventArgs e)
+        {
+            Buffer unos = new Buffer();
+
             unos.Ime = txtOsnovnipodatciIme1.Text;
             unos.Prezime = txtOsnovnipodatciPrezime.Text;
             unos.ImeOca = txtOsnovnipodatciImeoca.Text;
@@ -27,7 +33,12 @@ namespace KBCRijekaKantridaRegistar.GUI
             unos.DatumRodenja = Convert.ToDateTime(txtOsnovnipodatciDatumrođenja.Text);
             unos.Spol = txtOsnovnipodatciSpol.Text;
 
+            Trudnoca unosPodatakaTrudnoca = new Trudnoca();
+            unosPodatakaTrudnoca.Show();
+            this.Hide();
 
         }
+
+        
     }
 }

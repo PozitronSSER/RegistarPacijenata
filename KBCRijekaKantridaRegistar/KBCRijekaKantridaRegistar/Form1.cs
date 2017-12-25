@@ -40,6 +40,8 @@ namespace KBCRijekaKantridaRegistar
 
         private void button1_Click(object sender, EventArgs e)
         {
+           /*
+            
             //pretvaranje "true" u "da" ... ipak smo hrvati
             string jednoplodna, carskirez, prirodna, ferbrilitet, PROM, Reanimacija;
             if (rbtnTrunocaJednoplodna.Checked == true)
@@ -195,8 +197,8 @@ namespace KBCRijekaKantridaRegistar
             chkBoxPatologijaTrudnoćeOstalo.Checked = false;
             chkBoxPorodFebrilitetrodilje.Checked = false;
             chkBoxPorodPROM.Checked = false;
-        
-
+        */
+    
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -210,6 +212,7 @@ namespace KBCRijekaKantridaRegistar
 
         private void chkBoxPatologijaTrudnoćeOstalo_CheckedChanged(object sender, EventArgs e)
         {
+            /*
             if (this.chkBoxPatologijaTrudnoćeOstalo.Checked)
             {
                 txtPatologijaTrudnoćeOstalo.Enabled = true;
@@ -218,6 +221,7 @@ namespace KBCRijekaKantridaRegistar
             {
                 txtPatologijaTrudnoćeOstalo.Enabled = false;
             }
+            */
         }
 
         private void chkBoxNovorođenčeKomplikacijeOstalo_CheckedChanged(object sender, EventArgs e)
