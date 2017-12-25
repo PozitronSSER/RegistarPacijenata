@@ -53,42 +53,42 @@
             // 
             this.txtOsnovnipodatciKontakttelefon.Location = new System.Drawing.Point(102, 186);
             this.txtOsnovnipodatciKontakttelefon.Name = "txtOsnovnipodatciKontakttelefon";
-            this.txtOsnovnipodatciKontakttelefon.Size = new System.Drawing.Size(151, 20);
+            this.txtOsnovnipodatciKontakttelefon.Size = new System.Drawing.Size(266, 20);
             this.txtOsnovnipodatciKontakttelefon.TabIndex = 39;
             // 
             // txtOsnovnipodatciAdresa
             // 
             this.txtOsnovnipodatciAdresa.Location = new System.Drawing.Point(102, 156);
             this.txtOsnovnipodatciAdresa.Name = "txtOsnovnipodatciAdresa";
-            this.txtOsnovnipodatciAdresa.Size = new System.Drawing.Size(151, 20);
+            this.txtOsnovnipodatciAdresa.Size = new System.Drawing.Size(266, 20);
             this.txtOsnovnipodatciAdresa.TabIndex = 38;
             // 
             // txtOsnovnipodatciImeoca
             // 
             this.txtOsnovnipodatciImeoca.Location = new System.Drawing.Point(102, 126);
             this.txtOsnovnipodatciImeoca.Name = "txtOsnovnipodatciImeoca";
-            this.txtOsnovnipodatciImeoca.Size = new System.Drawing.Size(151, 20);
+            this.txtOsnovnipodatciImeoca.Size = new System.Drawing.Size(266, 20);
             this.txtOsnovnipodatciImeoca.TabIndex = 37;
             // 
             // txtOsnovnipodatciImemajke
             // 
             this.txtOsnovnipodatciImemajke.Location = new System.Drawing.Point(102, 96);
             this.txtOsnovnipodatciImemajke.Name = "txtOsnovnipodatciImemajke";
-            this.txtOsnovnipodatciImemajke.Size = new System.Drawing.Size(151, 20);
+            this.txtOsnovnipodatciImemajke.Size = new System.Drawing.Size(266, 20);
             this.txtOsnovnipodatciImemajke.TabIndex = 36;
             // 
             // txtOsnovnipodatciIme1
             // 
             this.txtOsnovnipodatciIme1.Location = new System.Drawing.Point(102, 66);
             this.txtOsnovnipodatciIme1.Name = "txtOsnovnipodatciIme1";
-            this.txtOsnovnipodatciIme1.Size = new System.Drawing.Size(151, 20);
+            this.txtOsnovnipodatciIme1.Size = new System.Drawing.Size(266, 20);
             this.txtOsnovnipodatciIme1.TabIndex = 35;
             // 
             // txtOsnovnipodatciPrezime
             // 
             this.txtOsnovnipodatciPrezime.Location = new System.Drawing.Point(102, 36);
             this.txtOsnovnipodatciPrezime.Name = "txtOsnovnipodatciPrezime";
-            this.txtOsnovnipodatciPrezime.Size = new System.Drawing.Size(151, 20);
+            this.txtOsnovnipodatciPrezime.Size = new System.Drawing.Size(266, 20);
             this.txtOsnovnipodatciPrezime.TabIndex = 34;
             // 
             // txtOsnovnipodatciSpol
@@ -99,14 +99,14 @@
             "Ž"});
             this.txtOsnovnipodatciSpol.Location = new System.Drawing.Point(102, 246);
             this.txtOsnovnipodatciSpol.Name = "txtOsnovnipodatciSpol";
-            this.txtOsnovnipodatciSpol.Size = new System.Drawing.Size(150, 21);
+            this.txtOsnovnipodatciSpol.Size = new System.Drawing.Size(265, 21);
             this.txtOsnovnipodatciSpol.TabIndex = 33;
             // 
             // txtOsnovnipodatciDatumrođenja
             // 
             this.txtOsnovnipodatciDatumrođenja.Location = new System.Drawing.Point(102, 216);
             this.txtOsnovnipodatciDatumrođenja.Name = "txtOsnovnipodatciDatumrođenja";
-            this.txtOsnovnipodatciDatumrođenja.Size = new System.Drawing.Size(150, 20);
+            this.txtOsnovnipodatciDatumrođenja.Size = new System.Drawing.Size(265, 20);
             this.txtOsnovnipodatciDatumrođenja.TabIndex = 32;
             // 
             // label10
@@ -192,7 +192,7 @@
             // 
             // btnOdustaniOsnovniPodaci
             // 
-            this.btnOdustaniOsnovniPodaci.Location = new System.Drawing.Point(96, 288);
+            this.btnOdustaniOsnovniPodaci.Location = new System.Drawing.Point(211, 288);
             this.btnOdustaniOsnovniPodaci.Name = "btnOdustaniOsnovniPodaci";
             this.btnOdustaniOsnovniPodaci.Size = new System.Drawing.Size(75, 23);
             this.btnOdustaniOsnovniPodaci.TabIndex = 40;
@@ -201,7 +201,7 @@
             // 
             // btnDaljeOsnovniPodaci
             // 
-            this.btnDaljeOsnovniPodaci.Location = new System.Drawing.Point(177, 288);
+            this.btnDaljeOsnovniPodaci.Location = new System.Drawing.Point(292, 288);
             this.btnDaljeOsnovniPodaci.Name = "btnDaljeOsnovniPodaci";
             this.btnDaljeOsnovniPodaci.Size = new System.Drawing.Size(75, 23);
             this.btnDaljeOsnovniPodaci.TabIndex = 41;
@@ -213,7 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(275, 323);
+            this.ClientSize = new System.Drawing.Size(380, 323);
             this.Controls.Add(this.btnDaljeOsnovniPodaci);
             this.Controls.Add(this.btnOdustaniOsnovniPodaci);
             this.Controls.Add(this.txtOsnovnipodatciKontakttelefon);

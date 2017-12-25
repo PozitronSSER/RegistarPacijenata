@@ -24,7 +24,7 @@ namespace KBCRijekaKantridaRegistar.GUI
         {
             OsnovniPodaci unosPodataka = new OsnovniPodaci();
             unosPodataka.Show();
-            this.Hide();
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

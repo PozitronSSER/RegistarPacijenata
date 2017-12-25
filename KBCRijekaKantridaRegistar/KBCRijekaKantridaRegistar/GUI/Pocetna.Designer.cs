@@ -37,7 +37,7 @@
             // 
             this.btnUnosPacijenta.Location = new System.Drawing.Point(12, 12);
             this.btnUnosPacijenta.Name = "btnUnosPacijenta";
-            this.btnUnosPacijenta.Size = new System.Drawing.Size(156, 48);
+            this.btnUnosPacijenta.Size = new System.Drawing.Size(374, 48);
             this.btnUnosPacijenta.TabIndex = 0;
             this.btnUnosPacijenta.Text = "Unos novog pacijenta";
             this.btnUnosPacijenta.UseVisualStyleBackColor = true;
@@ -47,7 +47,7 @@
             // 
             this.btnPregledPacijenata.Location = new System.Drawing.Point(12, 66);
             this.btnPregledPacijenata.Name = "btnPregledPacijenata";
-            this.btnPregledPacijenata.Size = new System.Drawing.Size(156, 48);
+            this.btnPregledPacijenata.Size = new System.Drawing.Size(374, 48);
             this.btnPregledPacijenata.TabIndex = 1;
             this.btnPregledPacijenata.Text = "Pregled pacijenata";
             this.btnPregledPacijenata.UseVisualStyleBackColor = true;
@@ -56,7 +56,7 @@
             // 
             this.btnIzlaz.Location = new System.Drawing.Point(12, 120);
             this.btnIzlaz.Name = "btnIzlaz";
-            this.btnIzlaz.Size = new System.Drawing.Size(156, 48);
+            this.btnIzlaz.Size = new System.Drawing.Size(374, 48);
             this.btnIzlaz.TabIndex = 2;
             this.btnIzlaz.Text = "Izlaz";
             this.btnIzlaz.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(185, 178);
+            this.ClientSize = new System.Drawing.Size(398, 204);
             this.Controls.Add(this.btnIzlaz);
             this.Controls.Add(this.btnPregledPacijenata);
             this.Controls.Add(this.btnUnosPacijenta);

@@ -8,11 +8,15 @@ namespace KBCRijekaKantridaRegistar.GUI
 {
     class Buffer
     {
-        static int sifraPacijenta = 0;
+        public static int sifraPacijenta = 0; // trebao bi čitati zadnju šifru iz xml dokumenta
 
-        int id, gestacijskaDobTjedana, gestacijskaDobDana, rodnaMasa, rodnaTezina, opsegGlave;
-        string ime, prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,
-            apgarIndeks, trajanjePoroda;
+        int id, gestacijskaDobTjedana, gestacijskaDobDana, rodnaMasa, rodnaDuljina, opsegGlave;
+        string ime, prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa
+        string apgarIndeks, trajanjePoroda;
+        string naciPoroda2, promTekst, febrilitet;
+        string plodnostTrudnoce;
+        string nacinTrudnoce;
+        string reanimacijaTekst;
         DateTime datumRodenja;
         bool trudnocaPlodna, trudnocaPrirodna, nacinPoroda, prom, febrilitetRodilje, reanimacija;
         string[] patologijaTrudnoce = new string[6];
@@ -22,7 +26,7 @@ namespace KBCRijekaKantridaRegistar.GUI
         public int GestacijskaDobTjedana { get => gestacijskaDobTjedana; set => gestacijskaDobTjedana = value; }
         public int GestacijskaDobDana { get => gestacijskaDobDana; set => gestacijskaDobDana = value; }
         public int RodnaMasa { get => rodnaMasa; set => rodnaMasa = value; }
-        public int RodnaTezina { get => rodnaTezina; set => rodnaTezina = value; }
+        public int RodnaDuljina { get => rodnaDuljina; set => rodnaDuljina = value; }
         public int OpsegGlave { get => opsegGlave; set => opsegGlave = value; }
         public string Ime { get => ime; set => ime = value; }
         public string Prezime { get => prezime; set => prezime = value; }
@@ -43,6 +47,14 @@ namespace KBCRijekaKantridaRegistar.GUI
         public bool Reanimacija { get => reanimacija; set => reanimacija = value; }
         public string[] PatologijaTrudnoce { get => patologijaTrudnoce; set => patologijaTrudnoce = value; }
         public string[] Komplikacije { get => komplikacije; set => komplikacije = value; }
+        public string PlodnostTrudnoce { get => plodnostTrudnoce; set => plodnostTrudnoce = value; }
+        public string NacinTrudnoce { get => nacinTrudnoce; set => nacinTrudnoce = value; }
+        public string NaciPoroda2 { get => naciPoroda2; set => naciPoroda2 = value; }
+        public string PromTekst { get => promTekst; set => promTekst = value; }
+        public string Febrilitet { get => febrilitet; set => febrilitet = value; }
+        public string ApgarIndeks { get => apgarIndeks; set => apgarIndeks = value; }
+        public string TrajanjePoroda { get => trajanjePoroda; set => trajanjePoroda = value; }
+        public string ReanimacijaTekst { get => reanimacijaTekst; set => reanimacijaTekst = value; }
 
         public Buffer()
         {

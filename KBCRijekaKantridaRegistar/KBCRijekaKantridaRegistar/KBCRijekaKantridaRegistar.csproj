@@ -64,6 +64,12 @@
     <Compile Include="GUI\Pocetna.Designer.cs">
       <DependentUpon>Pocetna.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Porod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Porod.Designer.cs">
+      <DependentUpon>Porod.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Trudnoca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Pocetna.resx">
       <DependentUpon>Pocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Porod.resx">
+      <DependentUpon>Porod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Trudnoca.resx">
       <DependentUpon>Trudnoca.cs</DependentUpon>

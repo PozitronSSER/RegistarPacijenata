@@ -129,6 +129,7 @@
             this.chkBoxPatologijaTrudnoćeOstalo.TabIndex = 1;
             this.chkBoxPatologijaTrudnoćeOstalo.Text = "ostalo";
             this.chkBoxPatologijaTrudnoćeOstalo.UseVisualStyleBackColor = true;
+            this.chkBoxPatologijaTrudnoćeOstalo.CheckedChanged += new System.EventHandler(this.chkBoxPatologijaTrudnoćeOstalo_CheckedChanged);
             // 
             // chkListBoxPatologijaTrudnoće
             // 
@@ -263,6 +264,7 @@
             this.btnDaljeTrudnoca.TabIndex = 20;
             this.btnDaljeTrudnoca.Text = "Nastavi";
             this.btnDaljeTrudnoca.UseVisualStyleBackColor = true;
+            this.btnDaljeTrudnoca.Click += new System.EventHandler(this.btnDaljeTrudnoca_Click);
             // 
             // Trudnoca
             // 

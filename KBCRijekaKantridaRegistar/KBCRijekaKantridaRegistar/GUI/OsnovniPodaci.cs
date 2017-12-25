@@ -23,7 +23,7 @@ namespace KBCRijekaKantridaRegistar.GUI
 
         public void btnDaljeOsnovniPodaci_Click(object sender, EventArgs e)
         {
-            Buffer unos = new Buffer();
+           Buffer unos = new Buffer();
 
             unos.Ime = txtOsnovnipodatciIme1.Text;
             unos.Prezime = txtOsnovnipodatciPrezime.Text;
