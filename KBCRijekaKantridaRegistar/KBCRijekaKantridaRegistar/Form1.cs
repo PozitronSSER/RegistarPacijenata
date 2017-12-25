@@ -31,49 +31,123 @@ namespace KBCRijekaKantridaRegistar
             InitializeComponent();
         }
 
+        //nesto s neta za pretvaranje string array-a u string
+        static string ConvertStringArrayToStringJoin(string[] array)
+        {
+            string result = string.Join(",", array);
+            return result;
+        }
+
         // upis podataka nakon odabira opcije "Upiši"
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //copy-paste iz Pacijent.cs(uz neke male promjene)
+
+            // (1) provjeriti da li su sve varijable u redu
+
+            int id, gestacijskaDobTjedana, gestacijskaDobDana, rodnaMasa, rodnaDuljina, opsegGlave;
+            string ime, prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,
+                apgarIndeks, trajanjePoroda;
+
+            string trudnocaPlodna, trudnocaPrirodna, nacinPoroda, prom, febrilitetRodilje, reanimacija; //stavio sam string umjesto bool jer ce se kasnije nesto mijenjati
+
+            // (2) provjeriti da li je dobro koristiti niz, ili ima bolje rješenje
+
+            //gledamo ako je ostalo izabrano, ako je dodajemo +1 u string
+            int ostaloPatologija = 0;
+            int ostaloKomplikacije = 0;
+            if (chkBoxNovorođenčeKomplikacijeOstalo.Checked)
+                ostaloKomplikacije = 1;
+
+            if (chkBoxPatologijaTrudnoćeOstalo.Checked)
+                ostaloPatologija = 1;
+
+            string[] patologijaTrudnoce = new string[chkListBoxPatologijaTrudnoće.SelectedItems.Count + ostaloPatologija]; //ne radi kako treba
+            string[] komplikacije = new string[chkListBoxNovorodenceKomplikacije.SelectedItems.Count + ostaloKomplikacije]; //ne raid kako treba
+
+            DateTime datumRodenja;
+            //korištenje prijelaznih varijabli
+
+            gestacijskaDobTjedana = Convert.ToInt32(txtGestacijskadobTjedana.Text);
+            gestacijskaDobDana = Convert.ToInt32(txtGestacijskadobDana.Text);
+            rodnaMasa = Convert.ToInt32(txtNovorodenceRodnamasa.Text);
+            rodnaDuljina = Convert.ToInt32(txtNovorodenceRodnaduljina.Text);
+            opsegGlave = Convert.ToInt32(txtNovorodenceOpsegglave.Text);
+
+            ime = txtOsnovnipodatciIme.Text;
+            prezime = txtOsnovnipodatciPrezime.Text;
+            imeMajke = txtOsnovnipodatciImemajke.Text;
+            imeOca = txtOsnovnipodatciImeoca.Text;
+            adresa = txtOsnovnipodatciAdresa.Text;
+            kontaktTelefon = txtOsnovnipodatciKontakttelefon.Text;
+            spol = txtOsnovnipodatciSpol.Text;
+            paritetTrudnoce = txtTrudnoćaParitet.Text;
+            stavDjeteta = txtPorodStavdjeteta.Text;
+            profilaksa = txtPorodKortikosteroidnaprofilaksa.Text;
+            apgarIndeks = txtNovorodenceApgarindeks.Text;
+            trajanjePoroda = txtPorodTrajanjeporoda.Text;
+            trudnocaPlodna = Convert.ToString(rbtnTrunocaJednoplodna.Checked);
+            trudnocaPrirodna = Convert.ToString(rbtnTrunocaPrirodna.Checked);
+            nacinPoroda = Convert.ToString(rbtnPorodCarskirez.Checked);
+            prom = Convert.ToString(chkBoxPorodPROM.Checked);
+            febrilitetRodilje = Convert.ToString(chkBoxPorodFebrilitetrodilje.Checked);
+            reanimacija = Convert.ToString(chkBoxNovorodenceReanimacija.Checked);
+
+            for (int i = 0; i < komplikacije.Length; i++)
+                //neznam ovaj dio
+
+            if (ostaloPatologija == 1)
+            {
+                patologijaTrudnoce[patologijaTrudnoce.Length - 1] = txtPatologijaTrudnoćeOstalo.Text;
+            }
+            if(ostaloKomplikacije == 1)
+            {
+                komplikacije[komplikacije.Length - 1] = txtNovorođenčeKomplikacijeOstalo.Text;
+            }
+
+            datumRodenja = Convert.ToDateTime(txtOsnovnipodatciDatumrođenja.Text);
+         
+          
+
             //pretvaranje "true" u "da" ... ipak smo hrvati
-            string jednoplodna, carskirez, prirodna, ferbrilitet, PROM, Reanimacija;
-            if (rbtnTrunocaJednoplodna.Checked == true)
-                jednoplodna = "Da";
-            else
-                jednoplodna = "Ne";
 
-            if (rbtnTrunocaPrirodna.Checked == true)
-                prirodna = "Da";
+            if (trudnocaPlodna == "True")
+                trudnocaPlodna = "Jednoplodna";
             else
-                prirodna = "Ne";
+                trudnocaPlodna = "Višeplodna";
 
-            if (rbtnPorodCarskirez.Checked == true)
-                carskirez = "Da";
+            if (trudnocaPrirodna == "True")
+                trudnocaPrirodna = "Prirodna";
             else
-                carskirez = "Ne";
+                trudnocaPrirodna = "Potpomognuta";
 
-            if (chkBoxNovorodenceReanimacija.Checked == true)
-                Reanimacija = "Da";
+            if (nacinPoroda == "True")
+                nacinPoroda = "Carski rez";
             else
-                Reanimacija = "Ne";
+                nacinPoroda = "Vaginalno";
 
-            if (chkBoxPorodFebrilitetrodilje.Checked == true)
-                ferbrilitet = "Da";
+            if (reanimacija == "True")
+                reanimacija = "Da";
             else
-                ferbrilitet = "Ne";
+                reanimacija = "Ne";
 
-            if (chkBoxPorodPROM.Checked == true)
-                PROM = "Da";
+            if (febrilitetRodilje == "True")
+                febrilitetRodilje = "Da";
             else
-                PROM = "Ne";
+                febrilitetRodilje = "Ne";
+
+            if (prom == "True")
+                prom = "Da";
+            else
+                prom = "Ne";
             // kreiranje objekta pacijent
 
             // (1) napraviti objekt pomoću ispravnog konstruktora
 
-            Pacijent pacijent = new Pacijent(txtOsnovnipodatciIme.Text, txtOsnovnipodatciPrezime.Text, txtOsnovnipodatciImemajke.Text,
-                txtOsnovnipodatciImeoca.Text, txtOsnovnipodatciAdresa.Text, txtOsnovnipodatciKontakttelefon.Text,
-                txtOsnovnipodatciSpol.Text, txtTrudnoćaParitet.Text, txtPorodStavdjeteta.Text, txtPorodKortikosteroidnaprofilaksa.Text,
-                Convert.ToDateTime(txtOsnovnipodatciDatumrođenja.Text), rbtnTrunocaPrirodna.Checked, txtPorodTrajanjeporoda.Text);
+            Pacijent pacijent = new Pacijent(ime, prezime, imeMajke,
+               imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,datumRodenja, 
+               rbtnTrunocaPrirodna.Checked/*trazi bool, a ja sam koristio string pa cu zasad ovako */, trajanjePoroda);
 
             //prebacivanje podataka u xml
 
@@ -91,32 +165,32 @@ namespace KBCRijekaKantridaRegistar
                     xmlWriter.WriteStartElement("Registar");
                     xmlWriter.WriteStartElement("Pacijent");
 
-                    xmlWriter.WriteElementString("Ime", pacijent.ImePacijenta);
-                    xmlWriter.WriteElementString("Prezime", pacijent.PrezimePacijenta);
-                    xmlWriter.WriteElementString("Imemajke", pacijent.ImeMajke);
-                    xmlWriter.WriteElementString("Imeoca", pacijent.ImeOca);
-                    xmlWriter.WriteElementString("Adresa", pacijent.Adresa);
-                    xmlWriter.WriteElementString("Kontakttelefon", pacijent.KontaktTelefon);
-                    xmlWriter.WriteElementString("Datumrođenja", pacijent.DatumRodenja.ToShortDateString());
-                    xmlWriter.WriteElementString("Spol", pacijent.Spol);
-                    xmlWriter.WriteElementString("Paritettrudnoće", pacijent.ParitetTrudnoce);
-                    xmlWriter.WriteElementString("Jednoplodnatrudnoća", jednoplodna); //zasad
-                    xmlWriter.WriteElementString("Prirodnatrudnoca", prirodna); //zasad
-                    xmlWriter.WriteElementString("Carskirez", carskirez); //zasad
-                    xmlWriter.WriteElementString("Trajanjeporoda", pacijent.TrajanjePoroda);
-                    xmlWriter.WriteElementString("Stavdjeteta", pacijent.StavDjeteta);
-                    xmlWriter.WriteElementString("Profilaksa", pacijent.Profilaksa);
-                    xmlWriter.WriteElementString("PROM", PROM); //zasad
-                    xmlWriter.WriteElementString("Ferbrilitet", ferbrilitet);//zasad
-                    xmlWriter.WriteElementString("Patologijatrudnoće", chkListBoxPatologijaTrudnoće.Text + txtPatologijaTrudnoćeOstalo.Text);//zasad
-                    xmlWriter.WriteElementString("Gestacijskadobtjedni", txtGestacijskadobTjedana.Text);//zasad
-                    xmlWriter.WriteElementString("Gestacijskadobdani", txtGestacijskadobDana.Text);//zasad
-                    xmlWriter.WriteElementString("Rodnamasa", txtNovorodenceRodnamasa.Text);//zasad
-                    xmlWriter.WriteElementString("Rodnaduljina", txtNovorodenceRodnaduljina.Text);//zasad
-                    xmlWriter.WriteElementString("Opsegglave", txtNovorodenceOpsegglave.Text);//zasad
-                    xmlWriter.WriteElementString("Agarindeks", txtNovorodenceApgarindeks.Text);//zasad
-                    xmlWriter.WriteElementString("Reanimacija", Reanimacija);//zasad
-                    xmlWriter.WriteElementString("Komplikacije", chkListBoxNovorodenceKomplikacije.Text + txtNovorođenčeKomplikacijeOstalo.Text);//zasad
+                    xmlWriter.WriteElementString("Ime", ime);
+                    xmlWriter.WriteElementString("Prezime", prezime);
+                    xmlWriter.WriteElementString("Imemajke", imeMajke);
+                    xmlWriter.WriteElementString("Imeoca",imeOca);
+                    xmlWriter.WriteElementString("Adresa", adresa);
+                    xmlWriter.WriteElementString("Kontakttelefon", kontaktTelefon);
+                    xmlWriter.WriteElementString("Datumrođenja", Convert.ToString(datumRodenja));
+                    xmlWriter.WriteElementString("Spol", spol);
+                    xmlWriter.WriteElementString("Paritettrudnoće", paritetTrudnoce);
+                    xmlWriter.WriteElementString("PlodnostTrudnoće", trudnocaPlodna); 
+                    xmlWriter.WriteElementString("PrirodaTrudnoće", trudnocaPrirodna); 
+                    xmlWriter.WriteElementString("NačinPoroda",nacinPoroda); 
+                    xmlWriter.WriteElementString("Trajanjeporoda", trajanjePoroda);
+                    xmlWriter.WriteElementString("Stavdjeteta", stavDjeteta);
+                    xmlWriter.WriteElementString("Profilaksa", profilaksa);
+                    xmlWriter.WriteElementString("PROM", prom); 
+                    xmlWriter.WriteElementString("Ferbrilitet", febrilitetRodilje);
+                    xmlWriter.WriteElementString("Patologijatrudnoće",ConvertStringArrayToStringJoin(patologijaTrudnoce));
+                    xmlWriter.WriteElementString("Gestacijskadobtjedni", Convert.ToString(gestacijskaDobTjedana));
+                    xmlWriter.WriteElementString("Gestacijskadobdani", Convert.ToString(gestacijskaDobDana));
+                    xmlWriter.WriteElementString("Rodnamasa", Convert.ToString(rodnaMasa));
+                    xmlWriter.WriteElementString("Rodnaduljina", Convert.ToString(rodnaDuljina));
+                    xmlWriter.WriteElementString("Opsegglave", Convert.ToString(opsegGlave));
+                    xmlWriter.WriteElementString("Apgarindeks", apgarIndeks);
+                    xmlWriter.WriteElementString("Reanimacija", reanimacija);
+                    xmlWriter.WriteElementString("Komplikacije",ConvertStringArrayToStringJoin(komplikacije));
 
                     xmlWriter.WriteEndElement();
                     xmlWriter.WriteEndElement();
@@ -134,32 +208,32 @@ namespace KBCRijekaKantridaRegistar
 
                 firstRow.AddBeforeSelf(
                     new XElement("Pacijent",
-                    new XElement("Ime", pacijent.ImePacijenta),
-                    new XElement("Prezime", pacijent.PrezimePacijenta),
-                    new XElement("Imemajke", pacijent.ImeMajke),
-                    new XElement("Imeoca", pacijent.ImeOca),
-                    new XElement("Adresa", pacijent.Adresa),
-                    new XElement("Kontakttelefon", pacijent.KontaktTelefon),
-                    new XElement("Datumrođenja", pacijent.DatumRodenja.ToShortDateString()),
-                    new XElement("Spol", pacijent.Spol),
-                    new XElement("Paritettrudnoće", pacijent.ParitetTrudnoce),
-                    new XElement("Jednoplodnatrudnoća", jednoplodna), //zasad
-                    new XElement("Prirodnatrudnoca", pacijent.TrudnocaPrirodna.ToString()),
-                    new XElement("Carskirez", carskirez), //zasad 
-                    new XElement("Trajanjeporoda", pacijent.TrajanjePoroda),
-                    new XElement("Stavdjeteta", pacijent.StavDjeteta),
-                    new XElement("Profilaksa", pacijent.Profilaksa),
-                    new XElement("PROM", PROM), //zasad 
-                    new XElement("Ferbrilitet", ferbrilitet), //zasad 
-                    new XElement("Patologijatrudnoće", chkListBoxPatologijaTrudnoće.Text + txtPatologijaTrudnoćeOstalo.Text), //zasad 
-                    new XElement("Gestacijskadobtjedni", txtGestacijskadobTjedana.Text), //zasad 
-                    new XElement("Gestacijskadobdani", txtGestacijskadobDana.Text), //zasad 
-                    new XElement("Rodnamasa", txtNovorodenceRodnamasa.Text), //zasad 
-                    new XElement("Rodnaduljina", txtNovorodenceRodnaduljina.Text), //zasad  
-                    new XElement("Opsegglave", txtNovorodenceOpsegglave.Text), //zasad 
-                    new XElement("Agarindeks", txtNovorodenceApgarindeks.Text), //zasad  
-                    new XElement("Reanimacija", Reanimacija), //zasad 
-                    new XElement("Komplikacije", chkListBoxNovorodenceKomplikacije.Text + txtNovorođenčeKomplikacijeOstalo.Text))); //zasad 
+                    new XElement("Ime", ime),
+                    new XElement("Prezime", prezime),
+                    new XElement("Imemajke", imeMajke),
+                    new XElement("Imeoca",imeOca),
+                    new XElement("Adresa", adresa),
+                    new XElement("Kontakttelefon", kontaktTelefon),
+                    new XElement("Datumrođenja", Convert.ToString(datumRodenja)),
+                    new XElement("Spol", spol),
+                    new XElement("Paritettrudnoće", paritetTrudnoce),
+                    new XElement("PlodnostTrudnoće", trudnocaPlodna), 
+                    new XElement("Prirodatrudnće",trudnocaPrirodna),
+                    new XElement("NačinPoroda", nacinPoroda),
+                    new XElement("Trajanjeporoda", trajanjePoroda),
+                    new XElement("Stavdjeteta", stavDjeteta),
+                    new XElement("Profilaksa", profilaksa),
+                    new XElement("PROM", prom), 
+                    new XElement("Ferbrilitet", febrilitetRodilje), 
+                    new XElement("Patologijatrudnoće",ConvertStringArrayToStringJoin(patologijaTrudnoce)), 
+                    new XElement("Gestacijskadobtjedni",gestacijskaDobTjedana), 
+                    new XElement("Gestacijskadobdani", gestacijskaDobDana), 
+                    new XElement("Rodnamasa", rodnaMasa), 
+                    new XElement("Rodnaduljina", rodnaDuljina), 
+                    new XElement("Opsegglave", opsegGlave),
+                    new XElement("Apgarindeks", apgarIndeks),            
+                    new XElement("Reanimacija",reanimacija), 
+                    new XElement("Komplikacije",ConvertStringArrayToStringJoin(komplikacije)))); 
 
                 xDocument.Save("Registar.xml");
             }
@@ -213,7 +287,7 @@ namespace KBCRijekaKantridaRegistar
             chkBoxPatologijaTrudnoćeOstalo.Checked = false;
             chkBoxPorodFebrilitetrodilje.Checked = false;
             chkBoxPorodPROM.Checked = false;
-        
+             //nikako nemogu ocistit listboxove
 
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
