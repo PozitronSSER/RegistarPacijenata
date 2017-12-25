@@ -64,6 +64,10 @@ namespace KBCRijekaKantridaRegistar.GUI
             unos.GestacijskaDobTjedana = Convert.ToInt32(txtGestacijskadobTjedana.Text);
 
             unos.PatologijaTrudnoce = odabirPatologije();
+
+            this.Hide();
+            Porod porod = new Porod();
+            porod.Show();
             
         }
 

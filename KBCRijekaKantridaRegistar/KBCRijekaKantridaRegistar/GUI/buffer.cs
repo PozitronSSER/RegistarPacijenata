@@ -11,7 +11,7 @@ namespace KBCRijekaKantridaRegistar.GUI
         public static int sifraPacijenta = 0; // trebao bi čitati zadnju šifru iz xml dokumenta
 
         int id, gestacijskaDobTjedana, gestacijskaDobDana, rodnaMasa, rodnaDuljina, opsegGlave;
-        string ime, prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa
+        string ime, prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa;
         string apgarIndeks, trajanjePoroda;
         string naciPoroda2, promTekst, febrilitet;
         string plodnostTrudnoce;

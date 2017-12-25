@@ -226,14 +226,7 @@ namespace KBCRijekaKantridaRegistar
 
         private void chkBoxNovorođenčeKomplikacijeOstalo_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBoxNovorođenčeKomplikacijeOstalo.Checked)
-            {
-                txtNovorođenčeKomplikacijeOstalo.Enabled = true;
-            }
-            else
-            {
-                txtNovorođenčeKomplikacijeOstalo.Enabled = false;
-            }
+            
         }
 
         private void txtPatologijaTrudnoćeOstalo_TextChanged(object sender, EventArgs e)

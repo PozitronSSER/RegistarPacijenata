@@ -80,6 +80,14 @@ namespace KBCRijekaKantridaRegistar.GUI
             }
             unos.Komplikacije = komplikacije();
 
+            // izvoz u XML
+
+
+            // zatvaranje prozora i povratak na početni ekran
+            this.Hide();
+            
+            
+
         }
 
         private void chkBoxNovorođenčeKomplikacijeOstalo_CheckedChanged(object sender, EventArgs e)
