@@ -30,13 +30,40 @@ namespace KBCRijekaKantridaRegistar
         {
             InitializeComponent();
         }
+        // metoda za preuzimanje podataka iz ListCheckBoxa-a u string[]
 
+        public string[] komplikacija()
+        {
+            string[] komplikacije = new string[chkListBoxNovorodenceKomplikacije.Items.Count];
+
+            // korištenje List<> umjesto array
+            List<string> komItems = new List<string>();
+
+            foreach (string item in chkListBoxNovorodenceKomplikacije.CheckedItems)
+            {
+
+                komItems.Add(item);
+
+            }
+            if (chkBoxNovorođenčeKomplikacijeOstalo.Checked)
+            {
+                string komplikacijaOstalo = txtNovorođenčeKomplikacijeOstalo.Text;
+                komItems.Add(komplikacijaOstalo);
+            }
+
+            // pretvaranje List<> u string[]
+            komplikacije = komItems.ToArray();
+            return komplikacije;
+
+        }
+        /*
         //nesto s neta za pretvaranje string array-a u string
         static string ConvertStringArrayToStringJoin(string[] array)
         {
             string result = string.Join(",", array);
             return result;
         }
+        */
 
         // upis podataka nakon odabira opcije "Upiši"
 
@@ -69,6 +96,9 @@ namespace KBCRijekaKantridaRegistar
             DateTime datumRodenja;
             //korištenje prijelaznih varijabli
 
+            // "ubacivanje" podataka u array
+            komplikacije = komplikacija();
+
             gestacijskaDobTjedana = Convert.ToInt32(txtGestacijskadobTjedana.Text);
             gestacijskaDobDana = Convert.ToInt32(txtGestacijskadobDana.Text);
             rodnaMasa = Convert.ToInt32(txtNovorodenceRodnamasa.Text);
@@ -94,8 +124,12 @@ namespace KBCRijekaKantridaRegistar
             febrilitetRodilje = Convert.ToString(chkBoxPorodFebrilitetrodilje.Checked);
             reanimacija = Convert.ToString(chkBoxNovorodenceReanimacija.Checked);
 
-            for (int i = 0; i < komplikacije.Length; i++)
+            /*
+             * for (int i = 0; i < komplikacije.Length; i++)
                 //neznam ovaj dio
+                */
+
+
 
             if (ostaloPatologija == 1)
             {
