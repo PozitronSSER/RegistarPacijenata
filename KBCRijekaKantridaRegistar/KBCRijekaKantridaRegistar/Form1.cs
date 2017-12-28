@@ -56,22 +56,78 @@ namespace KBCRijekaKantridaRegistar
             return komplikacije;
 
         }
-        /*
+
+        public string[] patologija()
+        {
+            string[] patologije = new string[chkListBoxPatologijaTrudnoće.Items.Count];
+
+            List<string> patItems = new List<string>();
+
+            foreach (string item in chkListBoxPatologijaTrudnoće.CheckedItems)
+            {
+                patItems.Add(item);
+            }
+            if (chkBoxPatologijaTrudnoćeOstalo.Checked)
+            {
+                string patologijaOstalo = txtPatologijaTrudnoćeOstalo.Text;
+                patItems.Add(patologijaOstalo);
+            }
+
+            patologije = patItems.ToArray();
+            return patologije;
+
+        }
+
+        
         //nesto s neta za pretvaranje string array-a u string
         static string ConvertStringArrayToStringJoin(string[] array)
         {
             string result = string.Join(",", array);
             return result;
         }
-        */
+        
 
         // upis podataka nakon odabira opcije "Upiši"
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //copy-paste iz Pacijent.cs(uz neke male promjene)
+            
 
-            // (1) provjeriti da li su sve varijable u redu
+            if(txtGestacijskadobTjedana.Text=="")
+            {
+                MessageBox.Show("Neispravni unos Gestacijska dob tjedana");
+                goto Kraj;
+            }
+            
+            if (txtGestacijskadobDana.Text == "")
+            {
+                MessageBox.Show("Neispravni unos Gestacijska dob dana");
+                goto Kraj;
+            }
+            if (txtNovorodenceRodnamasa.Text == "")
+            {
+                MessageBox.Show("Neispravni unos rodne mase");
+                goto Kraj;
+            }
+            if (txtNovorodenceRodnaduljina.Text == "")
+            {
+                MessageBox.Show("Neispravni unos rodne duljine");
+                goto Kraj;
+            }
+            if (txtNovorodenceRodnaduljina.Text == "")
+            {
+                MessageBox.Show("Neispravni unos rodne duljine");
+                goto Kraj;
+            }
+            if (txtNovorodenceOpsegglave.Text == "")
+            {
+                MessageBox.Show("Neispravni unos opsega glave");
+                goto Kraj;
+            }
+            /*@Lovro Sverko da stavim ove ifove za sva polja ili samo za intove, ako da da stavim
+             error samo ako je prazno  ili da bas nesto provjeravam
+             (npr masa nemoze biti manja od 100)*/
+
 
             int id, gestacijskaDobTjedana, gestacijskaDobDana, rodnaMasa, rodnaDuljina, opsegGlave;
             string ime, prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,
@@ -79,26 +135,17 @@ namespace KBCRijekaKantridaRegistar
 
             string trudnocaPlodna, trudnocaPrirodna, nacinPoroda, prom, febrilitetRodilje, reanimacija; //stavio sam string umjesto bool jer ce se kasnije nesto mijenjati
 
+            string[] prijelazKomplikacije = new string[11];
+            string[] prijelazPatologija = new string[7];
+
             // (2) provjeriti da li je dobro koristiti niz, ili ima bolje rješenje
 
-            //gledamo ako je ostalo izabrano, ako je dodajemo +1 u string
-            int ostaloPatologija = 0;
-            int ostaloKomplikacije = 0;
-            if (chkBoxNovorođenčeKomplikacijeOstalo.Checked)
-                ostaloKomplikacije = 1;
 
-            if (chkBoxPatologijaTrudnoćeOstalo.Checked)
-                ostaloPatologija = 1;
-
-            string[] patologijaTrudnoce = new string[chkListBoxPatologijaTrudnoće.SelectedItems.Count + ostaloPatologija]; //ne radi kako treba
-            string[] komplikacije = new string[chkListBoxNovorodenceKomplikacije.SelectedItems.Count + ostaloKomplikacije]; //ne raid kako treba
 
             DateTime datumRodenja;
             //korištenje prijelaznih varijabli
 
-            // "ubacivanje" podataka u array
-            komplikacije = komplikacija();
-
+        
             gestacijskaDobTjedana = Convert.ToInt32(txtGestacijskadobTjedana.Text);
             gestacijskaDobDana = Convert.ToInt32(txtGestacijskadobDana.Text);
             rodnaMasa = Convert.ToInt32(txtNovorodenceRodnamasa.Text);
@@ -124,25 +171,11 @@ namespace KBCRijekaKantridaRegistar
             febrilitetRodilje = Convert.ToString(chkBoxPorodFebrilitetrodilje.Checked);
             reanimacija = Convert.ToString(chkBoxNovorodenceReanimacija.Checked);
 
-            /*
-             * for (int i = 0; i < komplikacije.Length; i++)
-                //neznam ovaj dio
-                */
-
-
-
-            if (ostaloPatologija == 1)
-            {
-                patologijaTrudnoce[patologijaTrudnoce.Length - 1] = txtPatologijaTrudnoćeOstalo.Text;
-            }
-            if(ostaloKomplikacije == 1)
-            {
-                komplikacije[komplikacije.Length - 1] = txtNovorođenčeKomplikacijeOstalo.Text;
-            }
+            prijelazPatologija = patologija();
+            prijelazKomplikacije = komplikacija();  //ovaj dio sam vjv bezveze zakomplicirao al nema veze
 
             datumRodenja = Convert.ToDateTime(txtOsnovnipodatciDatumrođenja.Text);
          
-          
 
             //pretvaranje "true" u "da" ... ipak smo hrvati
 
@@ -216,7 +249,7 @@ namespace KBCRijekaKantridaRegistar
                     xmlWriter.WriteElementString("Profilaksa", profilaksa);
                     xmlWriter.WriteElementString("PROM", prom); 
                     xmlWriter.WriteElementString("Ferbrilitet", febrilitetRodilje);
-                    xmlWriter.WriteElementString("Patologijatrudnoće",ConvertStringArrayToStringJoin(patologijaTrudnoce));
+                    xmlWriter.WriteElementString("Patologijatrudnoće", ConvertStringArrayToStringJoin(prijelazPatologija));
                     xmlWriter.WriteElementString("Gestacijskadobtjedni", Convert.ToString(gestacijskaDobTjedana));
                     xmlWriter.WriteElementString("Gestacijskadobdani", Convert.ToString(gestacijskaDobDana));
                     xmlWriter.WriteElementString("Rodnamasa", Convert.ToString(rodnaMasa));
@@ -224,7 +257,7 @@ namespace KBCRijekaKantridaRegistar
                     xmlWriter.WriteElementString("Opsegglave", Convert.ToString(opsegGlave));
                     xmlWriter.WriteElementString("Apgarindeks", apgarIndeks);
                     xmlWriter.WriteElementString("Reanimacija", reanimacija);
-                    xmlWriter.WriteElementString("Komplikacije",ConvertStringArrayToStringJoin(komplikacije));
+                    xmlWriter.WriteElementString("Komplikacije",ConvertStringArrayToStringJoin(prijelazKomplikacije));
 
                     xmlWriter.WriteEndElement();
                     xmlWriter.WriteEndElement();
@@ -259,7 +292,7 @@ namespace KBCRijekaKantridaRegistar
                     new XElement("Profilaksa", profilaksa),
                     new XElement("PROM", prom), 
                     new XElement("Ferbrilitet", febrilitetRodilje), 
-                    new XElement("Patologijatrudnoće",ConvertStringArrayToStringJoin(patologijaTrudnoce)), 
+                    new XElement("Patologijatrudnoće",ConvertStringArrayToStringJoin(prijelazPatologija)), 
                     new XElement("Gestacijskadobtjedni",gestacijskaDobTjedana), 
                     new XElement("Gestacijskadobdani", gestacijskaDobDana), 
                     new XElement("Rodnamasa", rodnaMasa), 
@@ -267,7 +300,7 @@ namespace KBCRijekaKantridaRegistar
                     new XElement("Opsegglave", opsegGlave),
                     new XElement("Apgarindeks", apgarIndeks),            
                     new XElement("Reanimacija",reanimacija), 
-                    new XElement("Komplikacije",ConvertStringArrayToStringJoin(komplikacije)))); 
+                    new XElement("Komplikacije",ConvertStringArrayToStringJoin(prijelazKomplikacije)))); 
 
                 xDocument.Save("Registar.xml");
             }
@@ -321,8 +354,19 @@ namespace KBCRijekaKantridaRegistar
             chkBoxPatologijaTrudnoćeOstalo.Checked = false;
             chkBoxPorodFebrilitetrodilje.Checked = false;
             chkBoxPorodPROM.Checked = false;
-             //nikako nemogu ocistit listboxove
 
+            foreach (int i in chkListBoxNovorodenceKomplikacije.CheckedIndices)
+            {
+               chkListBoxNovorodenceKomplikacije.SetItemCheckState(i, CheckState.Unchecked);
+            }
+
+
+
+            foreach (int i in chkListBoxPatologijaTrudnoće.CheckedIndices)
+            {
+                chkListBoxPatologijaTrudnoće.SetItemCheckState(i, CheckState.Unchecked);
+            }
+        Kraj: ;
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
