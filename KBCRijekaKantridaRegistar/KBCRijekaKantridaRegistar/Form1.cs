@@ -91,9 +91,10 @@ namespace KBCRijekaKantridaRegistar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
 
-            if(txtGestacijskadobTjedana.Text=="")
+            /********** PROVJERA UNOSA POČETAK **********/
+
+            if (txtGestacijskadobTjedana.Text=="")
             {
                 MessageBox.Show("Neispravni unos Gestacijska dob tjedana");
                 goto Kraj;
@@ -128,6 +129,11 @@ namespace KBCRijekaKantridaRegistar
              error samo ako je prazno  ili da bas nesto provjeravam
              (npr masa nemoze biti manja od 100)*/
 
+            /* @Karlo Graf
+             * Nisam siguran da li nam to treba. Pitat ću doktorku za provjeru podataka pa javim.
+             * Mislim da bi program to trebao imati, samo ne znam granične vrijednosti. */
+
+            /********** PROVJERA UNOSA KRAJ **********/
 
             int id, gestacijskaDobTjedana, gestacijskaDobDana, rodnaMasa, rodnaDuljina, opsegGlave;
             string ime, prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,
