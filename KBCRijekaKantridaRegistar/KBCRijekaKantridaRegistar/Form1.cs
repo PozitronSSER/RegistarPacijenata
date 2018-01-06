@@ -183,7 +183,7 @@ namespace KBCRijekaKantridaRegistar
             datumRodenja = Convert.ToDateTime(txtOsnovnipodatciDatumrođenja.Text);
          
 
-            //pretvaranje "true" u "da" ... ipak smo hrvati
+            //pretvaranje "true" u "da" ... ipak smo Hrvati
 
             if (trudnocaPlodna == "True")
                 trudnocaPlodna = "Jednoplodna";
@@ -310,20 +310,6 @@ namespace KBCRijekaKantridaRegistar
 
                 xDocument.Save("Registar.xml");
             }
-
-
-            /* ovo je stari kod koji ste napravili prije
-             
-            doc.LoadXml("<Registar></Registar>");
-
-            XmlElement newElem = doc.CreateElement(txtOsnovnipodatciIme.Text);
-            newElem.InnerText = Convert.ToString(Pacijent.Id);
-            doc.DocumentElement.AppendChild(newElem);
-
-            doc.PreserveWhitespace = true;
-            doc.Save(txtOsnovnipodatciIme.Text+".xml");
-
-            */
 
 
             //čistimo podatke nakon unosa
