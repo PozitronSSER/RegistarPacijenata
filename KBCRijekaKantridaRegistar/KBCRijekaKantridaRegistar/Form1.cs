@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace KBCRijekaKantridaRegistar
 
-    /*
+    /*      ***** RIJEŠENO *****
      @Karlo-Graf 
      Što se tiče prebacivanja podataka u XML, možda bi bilo dobro spremiti podatke sa forme u "prijelazne" varijable, 
      jer mi se čini da ćemo imati više formi za upis podataka, 
@@ -130,8 +130,10 @@ namespace KBCRijekaKantridaRegistar
              (npr masa nemoze biti manja od 100)*/
 
             /* @Karlo Graf
-             * Nisam siguran da li nam to treba. Pitat ću doktorku za provjeru podataka pa javim.
-             * Mislim da bi program to trebao imati, samo ne znam granične vrijednosti. */
+             * 
+             Napraviti ćemo provjeru podataka tako da će se provjeravati da li je sve potrebno unešeno
+             i dobit ćemo krajnje vrijednosti za neke od podataka.
+             */
 
             /********** PROVJERA UNOSA KRAJ **********/
 
@@ -184,6 +186,10 @@ namespace KBCRijekaKantridaRegistar
          
 
             //pretvaranje "true" u "da" ... ipak smo Hrvati
+
+
+            //  svi "bool" podaci trebaju biti u obliku 1-true, 2-false, a kod izvoza u .xml dokument
+            //  XElement će biti naslov chkBox kontrole 
 
             if (trudnocaPlodna == "True")
                 trudnocaPlodna = "Jednoplodna";
