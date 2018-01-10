@@ -30,9 +30,11 @@ namespace KBCRijekaKantridaRegistar
         {
             InitializeComponent();
         }
-        // metoda za preuzimanje podataka iz ListCheckBoxa-a u string[]
 
-        public string[] komplikacija()
+        
+          // metoda za preuzimanje podataka iz ListCheckBoxa-a u string[]
+
+       /* public string[] komplikacija()
         {
             string[] komplikacije = new string[chkListBoxNovorodenceKomplikacije.Items.Count];
 
@@ -55,8 +57,8 @@ namespace KBCRijekaKantridaRegistar
             komplikacije = komItems.ToArray();
             return komplikacije;
 
-        }
-
+        } 
+        
         public string[] patologija()
         {
             string[] patologije = new string[chkListBoxPatologijaTrudnoće.Items.Count];
@@ -85,7 +87,7 @@ namespace KBCRijekaKantridaRegistar
             string result = string.Join(",", array);
             return result;
         }
-        
+        */
 
         // upis podataka nakon odabira opcije "Upiši"
 
@@ -141,10 +143,12 @@ namespace KBCRijekaKantridaRegistar
             string ime, prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,
                 apgarIndeks, trajanjePoroda;
 
-            string trudnocaPlodna, trudnocaPrirodna, nacinPoroda, prom, febrilitetRodilje, reanimacija; //stavio sam string umjesto bool jer ce se kasnije nesto mijenjati
-
-            string[] prijelazKomplikacije = new string[11];
-            string[] prijelazPatologija = new string[7];
+            string krvarenje, dijabetes, ppi, infekcije, hipertenzija, eph, ostaloPatologija, ostaloTextPatologija, trudnocaPlodna, trudnocaPrirodna, 
+                nacinPoroda, prom, febrilitetRodilje, reanimacija; //stavio sam string umjesto bool jer ce se kasnije nesto mijenjati
+            string hipoglikemija, rds, mehaničkaventilacija, sepsa, hiperbilirubinemija, konvulzije, pvl, pv_ivh, nec, rop, ostaloKomplikacije, ostaloTextKomplikacije; 
+            // Ne koristimo više ChkBox List
+            // string[] prijelazKomplikacije = new string[11];
+            // string[] prijelazPatologija = new string[7];
 
             // (2) provjeriti da li je dobro koristiti niz, ili ima bolje rješenje
 
@@ -153,13 +157,14 @@ namespace KBCRijekaKantridaRegistar
             DateTime datumRodenja;
             //korištenje prijelaznih varijabli
 
-        
+            
             gestacijskaDobTjedana = Convert.ToInt32(txtGestacijskadobTjedana.Text);
             gestacijskaDobDana = Convert.ToInt32(txtGestacijskadobDana.Text);
             rodnaMasa = Convert.ToInt32(txtNovorodenceRodnamasa.Text);
             rodnaDuljina = Convert.ToInt32(txtNovorodenceRodnaduljina.Text);
             opsegGlave = Convert.ToInt32(txtNovorodenceOpsegglave.Text);
 
+    
             ime = txtOsnovnipodatciIme.Text;
             prezime = txtOsnovnipodatciPrezime.Text;
             imeMajke = txtOsnovnipodatciImemajke.Text;
@@ -172,6 +177,27 @@ namespace KBCRijekaKantridaRegistar
             profilaksa = txtPorodKortikosteroidnaprofilaksa.Text;
             apgarIndeks = txtNovorodenceApgarindeks.Text;
             trajanjePoroda = txtPorodTrajanjeporoda.Text;
+            krvarenje = chkBoxPatologijatrudnoceKrvarenje.Text;
+            dijabetes = chkBoxPatologijatrudnoceDijabetes.Text;
+            ppi = chkBoxPatologijatrudnocePPI.Text;
+            infekcije = chkBoxPatologijatrudnoceInfekcije.Text;
+            hipertenzija = chkBoxPatologijatrudnoceHipertenzija.Text;
+            eph = chkBoxPatologijatrudnoceEPH.Text;
+            ostaloPatologija = chkBoxPatologijaTrudnoćeOstalo.Text;
+            hipoglikemija = chkBoxNovorođenčeHipoglikemija.Text;
+            rds = chkBoxNovorođenčeRDS.Text;
+            mehaničkaventilacija = chkBoxNovorođenčeMehVentilacija.Text;
+            sepsa = chkBoxNovorođenčeSepsa.Text;
+            hiperbilirubinemija = chkBoxNovorođenčeHiperbilirubinemija.Text;
+            konvulzije = chkBoxNovorođenčeKonvulzije.Text;
+            pvl = chkBoxNovorođenčePVL.Text;
+            pv_ivh = chkBoxNovorođenčePVIVH.Text;
+            nec = chkBoxNovorođenčeNEC.Text;
+            rop = chkBoxNovorođenčeROP.Text;
+            ostaloKomplikacije = chkBoxNovorođenčeOstalo.Text;
+            
+            
+
             trudnocaPlodna = Convert.ToString(rbtnTrunocaJednoplodna.Checked);
             trudnocaPrirodna = Convert.ToString(rbtnTrunocaPrirodna.Checked);
             nacinPoroda = Convert.ToString(rbtnPorodCarskirez.Checked);
@@ -179,17 +205,110 @@ namespace KBCRijekaKantridaRegistar
             febrilitetRodilje = Convert.ToString(chkBoxPorodFebrilitetrodilje.Checked);
             reanimacija = Convert.ToString(chkBoxNovorodenceReanimacija.Checked);
 
-            prijelazPatologija = patologija();
-            prijelazKomplikacije = komplikacija();  //ovaj dio sam vjv bezveze zakomplicirao al nema veze
+           /* prijelazPatologija = patologija();
+            prijelazKomplikacije = komplikacija();*/  //ovaj dio sam vjv bezveze zakomplicirao al nema veze
 
             datumRodenja = Convert.ToDateTime(txtOsnovnipodatciDatumrođenja.Text);
-         
+
 
             //pretvaranje "true" u "da" ... ipak smo Hrvati
 
 
             //  svi "bool" podaci trebaju biti u obliku 1-true, 2-false, a kod izvoza u .xml dokument
             //  XElement će biti naslov chkBox kontrole 
+
+            // Dodavanje chkBox-ova iz chkBoxListe 
+             
+            if (hipoglikemija == "True")
+                hipoglikemija = "Da";
+            else
+                hipoglikemija = "Ne";
+
+            if ( rds == "True")
+                rds  = "Da";
+            else
+                rds = "Ne";
+
+            if ( mehaničkaventilacija == "True")
+                 mehaničkaventilacija= "Da";
+            else
+                 mehaničkaventilacija = "Ne";
+
+            if ( sepsa == "True")
+                 sepsa = "Da";
+            else
+                sepsa = "Ne";
+
+            if ( hiperbilirubinemija == "True")
+                 hiperbilirubinemija = "Da";
+            else
+                 hiperbilirubinemija = "Ne";
+
+            if ( konvulzije == "True")
+                 konvulzije = "Da";
+            else
+                 konvulzije = "Ne";
+
+            if ( pvl == "True")
+                pvl = "Da";
+            else
+                pvl = "Ne";
+
+            if ( pv_ivh== "True")
+                 pv_ivh = "Da";
+            else
+                 pv_ivh = "Ne";
+
+            if ( nec== "True")
+                 nec = "Da";
+            else
+                 nec = "Ne";
+
+            if ( rop== "True")
+                 rop= "Da";
+            else
+                 rop= "Ne";
+
+            if ( ostaloKomplikacije == "True")
+                 ostaloTextKomplikacije = "Da";
+            else
+                 ostaloTextKomplikacije = "Ne";
+
+
+            if (ostaloPatologija == "True")
+                ostaloTextPatologija = txtPatologijaTrudnoćeOstalo.Text;
+            else
+                ostaloTextPatologija = "";
+
+            if (krvarenje == "True")
+                krvarenje = "Da";
+            else
+                krvarenje = "Ne";
+
+            if (dijabetes == "True")
+                dijabetes = "Da";
+            else
+                dijabetes = "Ne";
+
+            if (ppi == "True")
+                ppi = "Da";
+            else
+                ppi = "Ne";
+
+            if (infekcije == "True")
+                infekcije = "Da";
+            else
+                infekcije = "Ne";
+
+            if (hipertenzija == "True")
+                hipertenzija = "Da";
+            else
+                hipertenzija = "Ne";
+
+            if (eph == "True")
+                eph = "Da";
+            else
+                eph = "Ne";
 
             if (trudnocaPlodna == "True")
                 trudnocaPlodna = "Jednoplodna";
@@ -211,6 +330,7 @@ namespace KBCRijekaKantridaRegistar
             else
                 reanimacija = "Ne";
 
+
             if (febrilitetRodilje == "True")
                 febrilitetRodilje = "Da";
             else
@@ -226,7 +346,11 @@ namespace KBCRijekaKantridaRegistar
 
             Pacijent pacijent = new Pacijent(ime, prezime, imeMajke,
                imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,datumRodenja, 
-               rbtnTrunocaPrirodna.Checked/*trazi bool, a ja sam koristio string pa cu zasad ovako */, trajanjePoroda);
+               rbtnTrunocaPrirodna.Checked/*trazi bool, a ja sam koristio string pa cu zasad ovako */, trajanjePoroda, trudnocaPlodna, nacinPoroda,
+               chkBoxPorodPROM.Checked, chkBoxPorodFebrilitetrodilje.Checked, chkBoxNovorodenceReanimacija.Checked, chkBoxPatologijatrudnoceKrvarenje.Checked, chkBoxPatologijatrudnoceDijabetes.Checked, chkBoxPatologijatrudnocePPI.Checked, chkBoxPatologijatrudnoceInfekcije.Checked, chkBoxPatologijatrudnoceHipertenzija.Checked, chkBoxPatologijatrudnoceEPH.Checked, chkBoxPatologijaTrudnoćeOstalo.Checked, chkBoxNovorođenčeHipoglikemija.Checked, chkBoxNovorođenčeRDS.Checked, chkBoxNovorođenčeMehVentilacija.Checked,
+               chkBoxNovorođenčeSepsa.Checked, chkBoxNovorođenčeHiperbilirubinemija.Checked, chkBoxNovorođenčeKonvulzije.Checked, chkBoxNovorođenčePVL.Checked, chkBoxNovorođenčePVIVH.Checked, chkBoxNovorođenčeNEC.Checked, chkBoxNovorođenčeROP.Checked,chkBoxNovorođenčeOstalo.Checked,ostaloTextKomplikacije)
+               
+               // samo ovo treba sredit do kraja
 
             //prebacivanje podataka u xml
 
@@ -261,7 +385,14 @@ namespace KBCRijekaKantridaRegistar
                     xmlWriter.WriteElementString("Profilaksa", profilaksa);
                     xmlWriter.WriteElementString("PROM", prom); 
                     xmlWriter.WriteElementString("Ferbrilitet", febrilitetRodilje);
-                    xmlWriter.WriteElementString("Patologijatrudnoće", ConvertStringArrayToStringJoin(prijelazPatologija));
+                    //  xmlWriter.WriteElementString("Patologijatrudnoće", ConvertStringArrayToStringJoin(prijelazPatologija));
+                    xmlWriter.WriteElementString("Krvarenje", krvarenje);
+                    xmlWriter.WriteElementString("Dijabetes", dijabetes);
+                    xmlWriter.WriteElementString("PPI", ppi);
+                    xmlWriter.WriteElementString("Infekcije", hipertenzija);
+                    xmlWriter.WriteElementString("Hipertenzija", hipertenzija);
+                    xmlWriter.WriteElementString("EPH", eph);
+                    xmlWriter.WriteElementString("Ostalo", ostaloTextPatologija);
                     xmlWriter.WriteElementString("Gestacijskadobtjedni", Convert.ToString(gestacijskaDobTjedana));
                     xmlWriter.WriteElementString("Gestacijskadobdani", Convert.ToString(gestacijskaDobDana));
                     xmlWriter.WriteElementString("Rodnamasa", Convert.ToString(rodnaMasa));
@@ -269,8 +400,21 @@ namespace KBCRijekaKantridaRegistar
                     xmlWriter.WriteElementString("Opsegglave", Convert.ToString(opsegGlave));
                     xmlWriter.WriteElementString("Apgarindeks", apgarIndeks);
                     xmlWriter.WriteElementString("Reanimacija", reanimacija);
-                    xmlWriter.WriteElementString("Komplikacije",ConvertStringArrayToStringJoin(prijelazKomplikacije));
+                    //  xmlWriter.WriteElementString("Komplikacije",ConvertStringArrayToStringJoin(prijelazKomplikacije));
 
+                    
+
+                    xmlWriter.WriteElementString("Hipoglikemija", hipoglikemija);
+                    xmlWriter.WriteElementString("RDS", rds );
+                    xmlWriter.WriteElementString("Mehanička ventilacija (>72h)", mehaničkaventilacija );
+                    xmlWriter.WriteElementString("Sepsa",sepsa);
+                    xmlWriter.WriteElementString("Hiperbilitubinemija",hiperbilirubinemija);
+                    xmlWriter.WriteElementString("Konvulzije", konvulzije );
+                    xmlWriter.WriteElementString("PVL", pvl);
+                    xmlWriter.WriteElementString("PV-IVH",pv_ivh);
+                    xmlWriter.WriteElementString("NEC", nec );
+                    xmlWriter.WriteElementString("ROP",rop);
+                    xmlWriter.WriteElementString("Ostalo komplikacije",ostaloTextKomplikacije);
                     xmlWriter.WriteEndElement();
                     xmlWriter.WriteEndElement();
                     xmlWriter.WriteEndDocument();
@@ -290,29 +434,48 @@ namespace KBCRijekaKantridaRegistar
                     new XElement("Ime", ime),
                     new XElement("Prezime", prezime),
                     new XElement("Imemajke", imeMajke),
-                    new XElement("Imeoca",imeOca),
+                    new XElement("Imeoca", imeOca),
                     new XElement("Adresa", adresa),
                     new XElement("Kontakttelefon", kontaktTelefon),
                     new XElement("Datumrođenja", Convert.ToString(datumRodenja)),
                     new XElement("Spol", spol),
                     new XElement("Paritettrudnoće", paritetTrudnoce),
-                    new XElement("PlodnostTrudnoće", trudnocaPlodna), 
-                    new XElement("Prirodatrudnće",trudnocaPrirodna),
+                    new XElement("PlodnostTrudnoće", trudnocaPlodna),
+                    new XElement("Prirodatrudnće", trudnocaPrirodna),
                     new XElement("NačinPoroda", nacinPoroda),
                     new XElement("Trajanjeporoda", trajanjePoroda),
                     new XElement("Stavdjeteta", stavDjeteta),
                     new XElement("Profilaksa", profilaksa),
-                    new XElement("PROM", prom), 
-                    new XElement("Ferbrilitet", febrilitetRodilje), 
-                    new XElement("Patologijatrudnoće",ConvertStringArrayToStringJoin(prijelazPatologija)), 
-                    new XElement("Gestacijskadobtjedni",gestacijskaDobTjedana), 
-                    new XElement("Gestacijskadobdani", gestacijskaDobDana), 
-                    new XElement("Rodnamasa", rodnaMasa), 
-                    new XElement("Rodnaduljina", rodnaDuljina), 
+                    new XElement("PROM", prom),
+                    new XElement("Krvarenje", krvarenje),
+                    new XElement("Dijabetes", dijabetes),
+                    new XElement("PPI", ppi),
+                    new XElement("Infekcije", infekcije),
+                    new XElement("Hipertenzija", hipertenzija),
+                    new XElement("EPH", eph),
+                    new XElement("Ostalo", ostaloTextPatologija),
+                    new XElement("Ferbrilitet", febrilitetRodilje),
+                    // new XElement("Patologijatrudnoće",ConvertStringArrayToStringJoin(prijelazPatologija)), 
+                    new XElement("Gestacijskadobtjedni", gestacijskaDobTjedana),
+                    new XElement("Gestacijskadobdani", gestacijskaDobDana),
+                    new XElement("Rodnamasa", rodnaMasa),
+                    new XElement("Rodnaduljina", rodnaDuljina),
                     new XElement("Opsegglave", opsegGlave),
-                    new XElement("Apgarindeks", apgarIndeks),            
-                    new XElement("Reanimacija",reanimacija), 
-                    new XElement("Komplikacije",ConvertStringArrayToStringJoin(prijelazKomplikacije)))); 
+                    new XElement("Apgarindeks", apgarIndeks),
+                    new XElement("Reanimacija", reanimacija),
+                    new XElement("Hipoglikemija", hipoglikemija),
+                    new XElement("RDS", rds),
+                    new XElement("Mehanička ventilacija (>72h)", mehaničkaventilacija),
+                    new XElement("Sepsa", sepsa),
+                    new XElement("Hiperbilirubinemija", hiperbilirubinemija),
+                    new XElement("Konvulzije", konvulzije),
+                    new XElement("PVL", pvl),
+                    new XElement("PV-IVH", pv_ivh),
+                    new XElement("NEC", nec),
+                    new XElement("ROP", rop),
+                    new XElement("Ostalo komplikacije", ostaloTextKomplikacije)));
+                // new XElement("Komplikacije",ConvertStringArrayToStringJoin(prijelazKomplikacije))
+
 
                 xDocument.Save("Registar.xml");
             }
@@ -326,7 +489,7 @@ namespace KBCRijekaKantridaRegistar
             txtNovorodenceOpsegglave.Clear();
             txtNovorodenceRodnaduljina.Clear();
             txtNovorodenceRodnamasa.Clear();
-            txtNovorođenčeKomplikacijeOstalo.Clear();
+            txtNovorođenčeOstalo.Clear();
             txtOsnovnipodatciAdresa.Clear();
             txtOsnovnipodatciDatumrođenja.ResetText();
             txtOsnovnipodatciIme.Clear();
@@ -348,23 +511,44 @@ namespace KBCRijekaKantridaRegistar
             rbtnTrunocaViseplodna.Checked = false;
             rbtnVaginalno.Checked = false;
             chkBoxNovorodenceReanimacija.Checked = false;
-            chkBoxNovorođenčeKomplikacijeOstalo.Checked = false;
+            chkBoxNovorođenčeOstalo.Checked = false;
             chkBoxPatologijaTrudnoćeOstalo.Checked = false;
             chkBoxPorodFebrilitetrodilje.Checked = false;
             chkBoxPorodPROM.Checked = false;
+            chkBoxPatologijatrudnoceDijabetes.Checked = false;
+            chkBoxPatologijatrudnoceEPH.Checked = false;
+            chkBoxPatologijatrudnoceHipertenzija.Checked = false;
+            chkBoxPatologijatrudnoceInfekcije.Checked = false;
+            chkBoxPatologijatrudnoceKrvarenje.Checked = false;
+            chkBoxPatologijatrudnocePPI.Checked = false;
+            chkBoxPatologijaTrudnoćeOstalo.Checked = false;
+            txtPatologijaTrudnoćeOstalo.Clear();
+            chkBoxNovorođenčeHiperbilirubinemija.Checked = false;
+            chkBoxNovorođenčeHipoglikemija.Checked = false;
+            chkBoxNovorođenčeKonvulzije.Checked = false;
+            chkBoxNovorođenčeMehVentilacija.Checked = false;
+            chkBoxNovorođenčeNEC.Checked = false;
+            chkBoxNovorođenčeOstalo.Checked = false;
+            chkBoxNovorođenčePVIVH.Checked = false;
+            chkBoxNovorođenčePVL.Checked = false;
+            chkBoxNovorođenčeRDS.Checked = false;
+            chkBoxNovorođenčeROP.Checked = false;
+            chkBoxNovorođenčeSepsa.Checked = false;
+            txtNovorođenčeOstalo.Clear();
 
-            foreach (int i in chkListBoxNovorodenceKomplikacije.CheckedIndices)
-            {
-               chkListBoxNovorodenceKomplikacije.SetItemCheckState(i, CheckState.Unchecked);
-            }
+            /*  
+              foreach (int i in chkListBoxNovorodenceKomplikacije.CheckedIndices)
+                {
+                   chkListBoxNovorodenceKomplikacije.SetItemCheckState(i, CheckState.Unchecked);
+                }
 
 
 
-            foreach (int i in chkListBoxPatologijaTrudnoće.CheckedIndices)
-            {
-                chkListBoxPatologijaTrudnoće.SetItemCheckState(i, CheckState.Unchecked);
-            }
-        Kraj: ;
+              foreach (int i in chkListBoxPatologijaTrudnoće.CheckedIndices)
+                {
+                    chkListBoxPatologijaTrudnoće.SetItemCheckState(i, CheckState.Unchecked);
+                }*/
+            Kraj: ;
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
@@ -390,13 +574,13 @@ namespace KBCRijekaKantridaRegistar
 
         private void chkBoxNovorođenčeKomplikacijeOstalo_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkBoxNovorođenčeKomplikacijeOstalo.Checked)
+            if (chkBoxNovorođenčeOstalo.Checked)
             {
-                txtNovorođenčeKomplikacijeOstalo.Enabled = true;
+                txtNovorođenčeOstalo.Enabled = true;
             }
             else
             {
-                txtNovorođenčeKomplikacijeOstalo.Enabled = false;
+                txtNovorođenčeOstalo.Enabled = false;
             }
         }
 
@@ -416,6 +600,41 @@ namespace KBCRijekaKantridaRegistar
 
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTestIspis_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkBoxPorodPROM_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkBoxNovorođenčeMehV_CheckedChanged(object sender, EventArgs e)
         {
 
         }
