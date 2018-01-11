@@ -10,7 +10,7 @@ namespace KBCRijekaKantridaRegistar
 
         int id, gestacijskaDobTjedana, gestacijskaDobDana, rodnaMasa, rodnaTezina, opsegGlave;
         string Ime, Prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,
-            apgarIndeks, trajanjePoroda;
+            apgarIndeks, trajanjePoroda,trudnocaPlodna, trudnocaPrirodna;
         
         // (2) provjeriti da li je dobro koristiti niz, ili ima bolje rješenje
 
@@ -21,21 +21,24 @@ namespace KBCRijekaKantridaRegistar
 
         // (3) provjeriti da li je dobro koristiti bool, ili ima bolje rješenje
 
-        bool trudnocaPlodna, trudnocaPrirodna, nacinPoroda, prom, febrilitetRodilje, reanimacija,krvarenje, dijabetes, ppi,
+        bool prom, febrilitetRodilje, reanimacija,krvarenje, dijabetes, ppi,
             infekcije, hipertenzija, eph, ostaloPatologija;
-        bool hipoglikemija, rds, mehaničkaventilacija, sepsa, hiperbilirubinemija, konvulzije, pvl, PV_IVH, NEC, ROP, ostaloKomplikacije, ostaloTextKomplikacije;
+        bool hipoglikemija, rds, mehaničkaventilacija, sepsa, hiperbilirubinemija, konvulzije, pvl, PV_IVH, NEC, ROP, ostaloKomplikacije;
+        string nacinPoroda, ostaloTextKomplikacije;
+       
+/*      private string trudnocaPlodna1;
+        private string trudnocaPlodna2;
 
         public bool OstaloKomplikacije { get; private set; }
-        public bool OstaloTextKomplikacije { get; private set; }
-
+        public string OstaloTextKomplikacije { get; private set; }
+*/
         // (4) napraviti konstruktor do kraja tako da kreira sve potrebne podatke u objektu
         public Pacijent(string Ime, string Prezime, string ImeMajke, string ImeOca, string Adresa, string KontaktTelefon,
-            string Spol, string ParitetTrudnoce, string StavDjeteta, string Profilaksa, DateTime DatumRodenja, bool TrudnocaPrirodna,
-            string TrajanjePoroda,bool TrudnocaPlodna, bool NacinPoroda, bool Prom, bool FebrilitetRoditelj, bool Reanimacija, bool Krvarenje,
+            string Spol, string ParitetTrudnoce, string StavDjeteta, string Profilaksa, DateTime DatumRodenja, string TrudnocaPrirodna,
+            string TrajanjePoroda,string TrudnocaPlodna, bool Prom,string NacinPoroda, bool FebrilitetRoditelj, bool Reanimacija, bool Krvarenje,
             bool Dijabetes, bool PPI, bool Infekcije, bool Hipertenzija, bool EPH, bool OstaloPatologija, bool Hipoglikemija, bool RDS, 
             bool Mehaničkaventilacija,bool Sepsa, bool Hiperbilirubinemija, bool Konvulzije, bool PVL, bool PV_IVH, bool NEC, bool ROP, bool OstaloKomplikacije, 
-            string OstaloTextKomplikacije
-            )
+            string OstaloTextKomplikacije)
         {
             this.Ime = Ime;
             this.Prezime = Prezime;
@@ -76,7 +79,28 @@ namespace KBCRijekaKantridaRegistar
             this.OstaloKomplikacije = OstaloKomplikacije;
             this.OstaloTextKomplikacije = OstaloTextKomplikacije;
         }
-        
+
+    /*    public Pacijent(string ime, string prezime, string imeMajke, string imeOca, string adresa, string kontaktTelefon, string spol, string paritetTrudnoce, string stavDjeteta, string profilaksa, string apgarIndeks, string trajanjePoroda, string trudnocaPlodna1, string trudnocaPlodna2, bool checked1, string nacinPoroda, bool checked2, bool checked3, bool checked4, bool checked5, bool checked6, bool checked7, bool checked8, bool checked9, bool checked10, bool checked11, bool checked12, bool checked13, bool checked14, bool checked15, bool checked16, bool checked17, bool checked18, bool checked19, bool checked20, bool checked21, string text)
+        {
+            Ime = ime;
+            Prezime = prezime;
+            this.imeMajke = imeMajke;
+            this.imeOca = imeOca;
+            this.adresa = adresa;
+            this.kontaktTelefon = kontaktTelefon;
+            this.spol = spol;
+            this.paritetTrudnoce = paritetTrudnoce;
+            this.stavDjeteta = stavDjeteta;
+            this.profilaksa = profilaksa;
+            this.apgarIndeks = apgarIndeks;
+            this.trajanjePoroda = trajanjePoroda;
+            this.trudnocaPlodna1 = trudnocaPlodna1;
+            this.trudnocaPlodna2 = trudnocaPlodna2;
+            this.checked1 = checked1;
+            this.nacinPoroda = nacinPoroda;
+    
+        }*/
+
         // skužio sam kako ovo napraviti automatski, podsjetite me da vam pokažem
         // @Lovro Šverko - ubacio sam ostale; kako sada automatski getere i setere ?
 
@@ -102,15 +126,14 @@ namespace KBCRijekaKantridaRegistar
         // public string[] PatologijaTrudnoce { get => patologijaTrudnoce; set => patologijaTrudnoce = value; }
         // public string[] Komplikacije { get => komplikacije; set => komplikacije = value; }
         public DateTime DatumRodenja { get => datumRodenja; set => datumRodenja = value; }
-        public bool TrudnocaPlodna { get => trudnocaPlodna; set => trudnocaPlodna = value; }
-        public bool TrudnocaPrirodna { get => trudnocaPrirodna; set => trudnocaPrirodna = value; }
-        public bool NacinPoroda { get => nacinPoroda; set => nacinPoroda = value; }
+        public string TrudnocaPlodna { get => trudnocaPlodna; set => trudnocaPlodna = value; }
+        public string TrudnocaPrirodna { get => trudnocaPrirodna; set => trudnocaPrirodna = value; }
+        public string NacinPoroda { get => nacinPoroda; set => nacinPoroda = value; }
         public bool Prom { get => prom; set => prom = value; }
         public bool FebrilitetRodilje { get => febrilitetRodilje; set => febrilitetRodilje = value; }
         public bool Reanimacija { get => reanimacija; set => reanimacija = value; }
-        /*
-         *Nije dovršeno - pokušao bih automatski kako ste gore napisali 
-         
+        public string OstaloTextKomplikacije { get => ostaloTextKomplikacije; set => ostaloTextKomplikacije = value;  }
+        public bool OstaloKomplikacije { get => ostaloKomplikacije; set => ostaloKomplikacije = value; }
         public bool Krvarenje { get => krvarenje; set => krvarenje = value; }
         public bool Dijabetes { get => dijabetes; set => dijabetes = value; }
         public bool PPI { get => ppi; set => ppi = value; }
@@ -124,6 +147,7 @@ namespace KBCRijekaKantridaRegistar
         public bool Sepsa { get; }
         public bool Hiperbilirubinemija { get; }
         public bool Konvulzije { get; private set; }
-        */
+        public bool PVL { get => pvl; set => pvl = value; }
+
     } 
 }

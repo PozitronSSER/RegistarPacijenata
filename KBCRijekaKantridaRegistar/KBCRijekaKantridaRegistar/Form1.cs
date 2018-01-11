@@ -344,12 +344,14 @@ namespace KBCRijekaKantridaRegistar
 
             // (1) napraviti objekt pomoću ispravnog konstruktora
 
-            Pacijent pacijent = new Pacijent(ime, prezime, imeMajke,
-               imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,datumRodenja, 
-               rbtnTrunocaPrirodna.Checked/*trazi bool, a ja sam koristio string pa cu zasad ovako */, trajanjePoroda, trudnocaPlodna, nacinPoroda,
+            Pacijent pacijent = new Pacijent(ime, prezime, imeMajke, imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa,datumRodenja, trajanjePoroda,trudnocaPlodna, trudnocaPlodna, chkBoxPorodPROM.Checked,nacinPoroda, chkBoxPorodFebrilitetrodilje.Checked, chkBoxNovorodenceReanimacija.Checked, chkBoxPatologijatrudnoceKrvarenje.Checked, chkBoxPatologijatrudnoceDijabetes.Checked, chkBoxPatologijatrudnocePPI.Checked, chkBoxPatologijatrudnoceInfekcije.Checked, chkBoxPatologijatrudnoceHipertenzija.Checked, chkBoxPatologijatrudnoceEPH.Checked, chkBoxPatologijaTrudnoćeOstalo.Checked, chkBoxNovorođenčeHipoglikemija.Checked, chkBoxNovorođenčeRDS.Checked, chkBoxNovorođenčeMehVentilacija.Checked,chkBoxNovorođenčeSepsa.Checked, chkBoxNovorođenčeHiperbilirubinemija.Checked, chkBoxNovorođenčeKonvulzije.Checked,chkBoxNovorođenčePVL.Checked, chkBoxNovorođenčePVIVH.Checked, chkBoxNovorođenčeNEC.Checked, chkBoxNovorođenčeROP.Checked, chkBoxNovorođenčeOstalo.Checked, txtNovorođenčeOstalo.Text);
+
+           /* Pacijent pacijent = new Pacijent(ime, prezime, imeMajke,
+               imeOca, adresa, kontaktTelefon, spol, paritetTrudnoce, stavDjeteta, profilaksa, datumRodenja,
+               rbtnTrunocaPrirodna.Text/*trazi bool, a ja sam koristio string pa cu zasad ovako, trajanjePoroda, trudnocaPlodna, nacinPowroda,
                chkBoxPorodPROM.Checked, chkBoxPorodFebrilitetrodilje.Checked, chkBoxNovorodenceReanimacija.Checked, chkBoxPatologijatrudnoceKrvarenje.Checked, chkBoxPatologijatrudnoceDijabetes.Checked, chkBoxPatologijatrudnocePPI.Checked, chkBoxPatologijatrudnoceInfekcije.Checked, chkBoxPatologijatrudnoceHipertenzija.Checked, chkBoxPatologijatrudnoceEPH.Checked, chkBoxPatologijaTrudnoćeOstalo.Checked, chkBoxNovorođenčeHipoglikemija.Checked, chkBoxNovorođenčeRDS.Checked, chkBoxNovorođenčeMehVentilacija.Checked,
-               chkBoxNovorođenčeSepsa.Checked, chkBoxNovorođenčeHiperbilirubinemija.Checked, chkBoxNovorođenčeKonvulzije.Checked, chkBoxNovorođenčePVL.Checked, chkBoxNovorođenčePVIVH.Checked, chkBoxNovorođenčeNEC.Checked, chkBoxNovorođenčeROP.Checked,chkBoxNovorođenčeOstalo.Checked,ostaloTextKomplikacije)
-               
+               chkBoxNovorođenčeSepsa.Checked, chkBoxNovorođenčeHiperbilirubinemija.Checked, chkBoxNovorođenčeKonvulzije.Checked, chkBoxNovorođenčePVL.Checked, chkBoxNovorođenčePVIVH.Checked, chkBoxNovorođenčeNEC.Checked, chkBoxNovorođenčeROP.Checked, chkBoxNovorođenčeOstalo.Checked, ostaloTextKomplikacije);
+              */
                // samo ovo treba sredit do kraja
 
             //prebacivanje podataka u xml
@@ -465,7 +467,7 @@ namespace KBCRijekaKantridaRegistar
                     new XElement("Reanimacija", reanimacija),
                     new XElement("Hipoglikemija", hipoglikemija),
                     new XElement("RDS", rds),
-                    new XElement("Mehanička ventilacija (>72h)", mehaničkaventilacija),
+                    new XElement("Mehanička_ventilacija_72h", mehaničkaventilacija),
                     new XElement("Sepsa", sepsa),
                     new XElement("Hiperbilirubinemija", hiperbilirubinemija),
                     new XElement("Konvulzije", konvulzije),
@@ -473,11 +475,11 @@ namespace KBCRijekaKantridaRegistar
                     new XElement("PV-IVH", pv_ivh),
                     new XElement("NEC", nec),
                     new XElement("ROP", rop),
-                    new XElement("Ostalo komplikacije", ostaloTextKomplikacije)));
+                    new XElement("Ostalo_komplikacije", ostaloTextKomplikacije)));
                 // new XElement("Komplikacije",ConvertStringArrayToStringJoin(prijelazKomplikacije))
 
 
-                xDocument.Save("Registar.xml");
+                xDocument.Save("Registar6.xml");
             }
 
 
@@ -502,7 +504,7 @@ namespace KBCRijekaKantridaRegistar
             txtPorodKortikosteroidnaprofilaksa.ResetText();
             txtPorodStavdjeteta.ResetText();
             txtPorodTrajanjeporoda.Clear();
-            txtTestIspis.Clear();
+            // txtTestIspis.Clear();
             txtTrudnoćaParitet.ResetText();
             rbtnPorodCarskirez.Checked = false;
             rbtnTrunocaJednoplodna.Checked = false;
@@ -635,6 +637,26 @@ namespace KBCRijekaKantridaRegistar
         }
 
         private void chkBoxNovorođenčeMehV_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOsnovnipodatciDatumrođenja_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox9_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPorodKortikosteroidnaprofilaksa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

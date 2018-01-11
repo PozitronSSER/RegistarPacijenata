@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTrudnoćaParitet = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -49,6 +48,12 @@
             this.txtOsnovnipodatciDatumrođenja = new System.Windows.Forms.DateTimePicker();
             this.txtOsnovnipodatciSpol = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chkBoxPatologijatrudnoceEPH = new System.Windows.Forms.CheckBox();
+            this.chkBoxPatologijatrudnoceHipertenzija = new System.Windows.Forms.CheckBox();
+            this.chkBoxPatologijatrudnoceInfekcije = new System.Windows.Forms.CheckBox();
+            this.chkBoxPatologijatrudnocePPI = new System.Windows.Forms.CheckBox();
+            this.chkBoxPatologijatrudnoceDijabetes = new System.Windows.Forms.CheckBox();
+            this.chkBoxPatologijatrudnoceKrvarenje = new System.Windows.Forms.CheckBox();
             this.txtPatologijaTrudnoćeOstalo = new System.Windows.Forms.TextBox();
             this.chkBoxPatologijaTrudnoćeOstalo = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -69,6 +74,18 @@
             this.rbtnPorodCarskirez = new System.Windows.Forms.RadioButton();
             this.rbtnVaginalno = new System.Windows.Forms.RadioButton();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.chkBoxNovorođenčeROP = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.chkBoxNovorođenčeNEC = new System.Windows.Forms.CheckBox();
+            this.chkBoxNovorođenčePVIVH = new System.Windows.Forms.CheckBox();
+            this.chkBoxNovorođenčePVL = new System.Windows.Forms.CheckBox();
+            this.chkBoxNovorođenčeKonvulzije = new System.Windows.Forms.CheckBox();
+            this.chkBoxNovorođenčeHiperbilirubinemija = new System.Windows.Forms.CheckBox();
+            this.chkBoxNovorođenčeSepsa = new System.Windows.Forms.CheckBox();
+            this.chkBoxNovorođenčeMehVentilacija = new System.Windows.Forms.CheckBox();
+            this.chkBoxNovorođenčeRDS = new System.Windows.Forms.CheckBox();
+            this.chkBoxNovorođenčeHipoglikemija = new System.Windows.Forms.CheckBox();
             this.txtNovorodenceOpsegglave = new System.Windows.Forms.TextBox();
             this.txtNovorodenceRodnaduljina = new System.Windows.Forms.TextBox();
             this.txtNovorodenceRodnamasa = new System.Windows.Forms.TextBox();
@@ -87,26 +104,7 @@
             this.txtOsnovnipodatciImeoca = new System.Windows.Forms.TextBox();
             this.txtOsnovnipodatciAdresa = new System.Windows.Forms.TextBox();
             this.txtOsnovnipodatciKontakttelefon = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtTestIspis = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.chkBoxPatologijatrudnoceKrvarenje = new System.Windows.Forms.CheckBox();
-            this.chkBoxPatologijatrudnoceDijabetes = new System.Windows.Forms.CheckBox();
-            this.chkBoxPatologijatrudnocePPI = new System.Windows.Forms.CheckBox();
-            this.chkBoxPatologijatrudnoceInfekcije = new System.Windows.Forms.CheckBox();
-            this.chkBoxPatologijatrudnoceHipertenzija = new System.Windows.Forms.CheckBox();
-            this.chkBoxPatologijatrudnoceEPH = new System.Windows.Forms.CheckBox();
-            this.chkBoxNovorođenčeHipoglikemija = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.chkBoxNovorođenčeRDS = new System.Windows.Forms.CheckBox();
-            this.chkBoxNovorođenčeMehVentilacija = new System.Windows.Forms.CheckBox();
-            this.chkBoxNovorođenčeSepsa = new System.Windows.Forms.CheckBox();
-            this.chkBoxNovorođenčeHiperbilirubinemija = new System.Windows.Forms.CheckBox();
-            this.chkBoxNovorođenčeKonvulzije = new System.Windows.Forms.CheckBox();
-            this.chkBoxNovorođenčePVL = new System.Windows.Forms.CheckBox();
-            this.chkBoxNovorođenčePVIVH = new System.Windows.Forms.CheckBox();
-            this.chkBoxNovorođenčeNEC = new System.Windows.Forms.CheckBox();
-            this.chkBoxNovorođenčeROP = new System.Windows.Forms.CheckBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -115,16 +113,8 @@
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Osnovni podatci";
             // 
             // label2
             // 
@@ -154,7 +144,7 @@
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.txtTrudnoćaParitet);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(15, 152);
+            this.groupBox1.Location = new System.Drawing.Point(15, 211);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(253, 167);
             this.groupBox1.TabIndex = 3;
@@ -232,7 +222,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 35);
+            this.label3.Location = new System.Drawing.Point(8, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 4;
@@ -241,7 +231,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 62);
+            this.label4.Location = new System.Drawing.Point(8, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(27, 13);
             this.label4.TabIndex = 5;
@@ -250,7 +240,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(210, 36);
+            this.label5.Location = new System.Drawing.Point(188, 31);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
             this.label5.TabIndex = 6;
@@ -259,7 +249,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(210, 62);
+            this.label6.Location = new System.Drawing.Point(188, 63);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 13);
             this.label6.TabIndex = 7;
@@ -268,7 +258,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(426, 36);
+            this.label7.Location = new System.Drawing.Point(396, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 13);
             this.label7.TabIndex = 8;
@@ -277,7 +267,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(426, 62);
+            this.label8.Location = new System.Drawing.Point(396, 62);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(82, 13);
             this.label8.TabIndex = 9;
@@ -286,7 +276,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 115);
+            this.label9.Location = new System.Drawing.Point(53, 126);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 13);
             this.label9.TabIndex = 10;
@@ -295,7 +285,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 88);
+            this.label10.Location = new System.Drawing.Point(8, 97);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 13);
             this.label10.TabIndex = 11;
@@ -303,10 +293,11 @@
             // 
             // txtOsnovnipodatciDatumrođenja
             // 
-            this.txtOsnovnipodatciDatumrođenja.Location = new System.Drawing.Point(115, 88);
+            this.txtOsnovnipodatciDatumrođenja.Location = new System.Drawing.Point(94, 93);
             this.txtOsnovnipodatciDatumrođenja.Name = "txtOsnovnipodatciDatumrođenja";
             this.txtOsnovnipodatciDatumrođenja.Size = new System.Drawing.Size(109, 20);
             this.txtOsnovnipodatciDatumrođenja.TabIndex = 12;
+            this.txtOsnovnipodatciDatumrođenja.ValueChanged += new System.EventHandler(this.txtOsnovnipodatciDatumrođenja_ValueChanged);
             // 
             // txtOsnovnipodatciSpol
             // 
@@ -314,7 +305,7 @@
             this.txtOsnovnipodatciSpol.Items.AddRange(new object[] {
             "M",
             "Ž"});
-            this.txtOsnovnipodatciSpol.Location = new System.Drawing.Point(115, 115);
+            this.txtOsnovnipodatciSpol.Location = new System.Drawing.Point(94, 123);
             this.txtOsnovnipodatciSpol.Name = "txtOsnovnipodatciSpol";
             this.txtOsnovnipodatciSpol.Size = new System.Drawing.Size(109, 21);
             this.txtOsnovnipodatciSpol.TabIndex = 13;
@@ -330,12 +321,75 @@
             this.groupBox4.Controls.Add(this.chkBoxPatologijatrudnoceKrvarenje);
             this.groupBox4.Controls.Add(this.txtPatologijaTrudnoćeOstalo);
             this.groupBox4.Controls.Add(this.chkBoxPatologijaTrudnoćeOstalo);
-            this.groupBox4.Location = new System.Drawing.Point(274, 152);
+            this.groupBox4.Location = new System.Drawing.Point(456, 408);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(177, 187);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Patologija trudnoće";
+            // 
+            // chkBoxPatologijatrudnoceEPH
+            // 
+            this.chkBoxPatologijatrudnoceEPH.AutoSize = true;
+            this.chkBoxPatologijatrudnoceEPH.Location = new System.Drawing.Point(7, 140);
+            this.chkBoxPatologijatrudnoceEPH.Name = "chkBoxPatologijatrudnoceEPH";
+            this.chkBoxPatologijatrudnoceEPH.Size = new System.Drawing.Size(48, 17);
+            this.chkBoxPatologijatrudnoceEPH.TabIndex = 8;
+            this.chkBoxPatologijatrudnoceEPH.Text = "EPH";
+            this.chkBoxPatologijatrudnoceEPH.UseVisualStyleBackColor = true;
+            this.chkBoxPatologijatrudnoceEPH.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            // 
+            // chkBoxPatologijatrudnoceHipertenzija
+            // 
+            this.chkBoxPatologijatrudnoceHipertenzija.AutoSize = true;
+            this.chkBoxPatologijatrudnoceHipertenzija.Location = new System.Drawing.Point(7, 117);
+            this.chkBoxPatologijatrudnoceHipertenzija.Name = "chkBoxPatologijatrudnoceHipertenzija";
+            this.chkBoxPatologijatrudnoceHipertenzija.Size = new System.Drawing.Size(79, 17);
+            this.chkBoxPatologijatrudnoceHipertenzija.TabIndex = 7;
+            this.chkBoxPatologijatrudnoceHipertenzija.Text = "hipertenzija";
+            this.chkBoxPatologijatrudnoceHipertenzija.UseVisualStyleBackColor = true;
+            this.chkBoxPatologijatrudnoceHipertenzija.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            // 
+            // chkBoxPatologijatrudnoceInfekcije
+            // 
+            this.chkBoxPatologijatrudnoceInfekcije.AutoSize = true;
+            this.chkBoxPatologijatrudnoceInfekcije.Location = new System.Drawing.Point(7, 94);
+            this.chkBoxPatologijatrudnoceInfekcije.Name = "chkBoxPatologijatrudnoceInfekcije";
+            this.chkBoxPatologijatrudnoceInfekcije.Size = new System.Drawing.Size(65, 17);
+            this.chkBoxPatologijatrudnoceInfekcije.TabIndex = 6;
+            this.chkBoxPatologijatrudnoceInfekcije.Text = "infekcije";
+            this.chkBoxPatologijatrudnoceInfekcije.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxPatologijatrudnocePPI
+            // 
+            this.chkBoxPatologijatrudnocePPI.AutoSize = true;
+            this.chkBoxPatologijatrudnocePPI.Location = new System.Drawing.Point(7, 71);
+            this.chkBoxPatologijatrudnocePPI.Name = "chkBoxPatologijatrudnocePPI";
+            this.chkBoxPatologijatrudnocePPI.Size = new System.Drawing.Size(43, 17);
+            this.chkBoxPatologijatrudnocePPI.TabIndex = 5;
+            this.chkBoxPatologijatrudnocePPI.Text = "PPI";
+            this.chkBoxPatologijatrudnocePPI.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxPatologijatrudnoceDijabetes
+            // 
+            this.chkBoxPatologijatrudnoceDijabetes.AutoSize = true;
+            this.chkBoxPatologijatrudnoceDijabetes.Location = new System.Drawing.Point(7, 48);
+            this.chkBoxPatologijatrudnoceDijabetes.Name = "chkBoxPatologijatrudnoceDijabetes";
+            this.chkBoxPatologijatrudnoceDijabetes.Size = new System.Drawing.Size(68, 17);
+            this.chkBoxPatologijatrudnoceDijabetes.TabIndex = 4;
+            this.chkBoxPatologijatrudnoceDijabetes.Text = "dijabetes";
+            this.chkBoxPatologijatrudnoceDijabetes.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxPatologijatrudnoceKrvarenje
+            // 
+            this.chkBoxPatologijatrudnoceKrvarenje.AutoSize = true;
+            this.chkBoxPatologijatrudnoceKrvarenje.Location = new System.Drawing.Point(7, 25);
+            this.chkBoxPatologijatrudnoceKrvarenje.Name = "chkBoxPatologijatrudnoceKrvarenje";
+            this.chkBoxPatologijatrudnoceKrvarenje.Size = new System.Drawing.Size(70, 17);
+            this.chkBoxPatologijatrudnoceKrvarenje.TabIndex = 3;
+            this.chkBoxPatologijatrudnoceKrvarenje.Text = "krvarenje";
+            this.chkBoxPatologijatrudnoceKrvarenje.UseVisualStyleBackColor = true;
+            this.chkBoxPatologijatrudnoceKrvarenje.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtPatologijaTrudnoćeOstalo
             // 
@@ -363,7 +417,7 @@
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.txtGestacijskadobDana);
             this.groupBox5.Controls.Add(this.txtGestacijskadobTjedana);
-            this.groupBox5.Location = new System.Drawing.Point(457, 152);
+            this.groupBox5.Location = new System.Drawing.Point(653, 408);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(142, 134);
             this.groupBox5.TabIndex = 15;
@@ -413,7 +467,7 @@
             this.groupBox6.Controls.Add(this.txtPorodTrajanjeporoda);
             this.groupBox6.Controls.Add(this.label13);
             this.groupBox6.Controls.Add(this.groupBox7);
-            this.groupBox6.Location = new System.Drawing.Point(15, 359);
+            this.groupBox6.Location = new System.Drawing.Point(285, 211);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(532, 159);
             this.groupBox6.TabIndex = 4;
@@ -461,6 +515,7 @@
             this.txtPorodKortikosteroidnaprofilaksa.Name = "txtPorodKortikosteroidnaprofilaksa";
             this.txtPorodKortikosteroidnaprofilaksa.Size = new System.Drawing.Size(121, 21);
             this.txtPorodKortikosteroidnaprofilaksa.TabIndex = 5;
+            this.txtPorodKortikosteroidnaprofilaksa.SelectedIndexChanged += new System.EventHandler(this.txtPorodKortikosteroidnaprofilaksa_SelectedIndexChanged);
             // 
             // txtPorodStavdjeteta
             // 
@@ -555,12 +610,134 @@
             this.groupBox8.Controls.Add(this.label18);
             this.groupBox8.Controls.Add(this.label17);
             this.groupBox8.Controls.Add(this.label16);
-            this.groupBox8.Location = new System.Drawing.Point(556, 359);
+            this.groupBox8.Location = new System.Drawing.Point(15, 408);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(426, 304);
             this.groupBox8.TabIndex = 16;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Novorođenče";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(558, 677);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Ispiši";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // chkBoxNovorođenčeROP
+            // 
+            this.chkBoxNovorođenčeROP.AutoSize = true;
+            this.chkBoxNovorođenčeROP.Location = new System.Drawing.Point(210, 252);
+            this.chkBoxNovorođenčeROP.Name = "chkBoxNovorođenčeROP";
+            this.chkBoxNovorođenčeROP.Size = new System.Drawing.Size(49, 17);
+            this.chkBoxNovorođenčeROP.TabIndex = 21;
+            this.chkBoxNovorođenčeROP.Text = "ROP";
+            this.chkBoxNovorođenčeROP.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(653, 676);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(74, 24);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Upiši";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // chkBoxNovorođenčeNEC
+            // 
+            this.chkBoxNovorođenčeNEC.AutoSize = true;
+            this.chkBoxNovorođenčeNEC.Location = new System.Drawing.Point(210, 229);
+            this.chkBoxNovorođenčeNEC.Name = "chkBoxNovorođenčeNEC";
+            this.chkBoxNovorođenčeNEC.Size = new System.Drawing.Size(48, 17);
+            this.chkBoxNovorođenčeNEC.TabIndex = 20;
+            this.chkBoxNovorođenčeNEC.Text = "NEC";
+            this.chkBoxNovorođenčeNEC.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxNovorođenčePVIVH
+            // 
+            this.chkBoxNovorođenčePVIVH.AutoSize = true;
+            this.chkBoxNovorođenčePVIVH.Location = new System.Drawing.Point(210, 206);
+            this.chkBoxNovorođenčePVIVH.Name = "chkBoxNovorođenčePVIVH";
+            this.chkBoxNovorođenčePVIVH.Size = new System.Drawing.Size(67, 17);
+            this.chkBoxNovorođenčePVIVH.TabIndex = 19;
+            this.chkBoxNovorođenčePVIVH.Text = "PV - IVH";
+            this.chkBoxNovorođenčePVIVH.UseVisualStyleBackColor = true;
+            this.chkBoxNovorođenčePVIVH.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            // 
+            // chkBoxNovorođenčePVL
+            // 
+            this.chkBoxNovorođenčePVL.AutoSize = true;
+            this.chkBoxNovorođenčePVL.Location = new System.Drawing.Point(210, 183);
+            this.chkBoxNovorođenčePVL.Name = "chkBoxNovorođenčePVL";
+            this.chkBoxNovorođenčePVL.Size = new System.Drawing.Size(46, 17);
+            this.chkBoxNovorođenčePVL.TabIndex = 18;
+            this.chkBoxNovorođenčePVL.Text = "PVL";
+            this.chkBoxNovorođenčePVL.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxNovorođenčeKonvulzije
+            // 
+            this.chkBoxNovorođenčeKonvulzije.AutoSize = true;
+            this.chkBoxNovorođenčeKonvulzije.Location = new System.Drawing.Point(210, 160);
+            this.chkBoxNovorođenčeKonvulzije.Name = "chkBoxNovorođenčeKonvulzije";
+            this.chkBoxNovorođenčeKonvulzije.Size = new System.Drawing.Size(73, 17);
+            this.chkBoxNovorođenčeKonvulzije.TabIndex = 17;
+            this.chkBoxNovorođenčeKonvulzije.Text = "konvulzije";
+            this.chkBoxNovorođenčeKonvulzije.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxNovorođenčeHiperbilirubinemija
+            // 
+            this.chkBoxNovorođenčeHiperbilirubinemija.AutoSize = true;
+            this.chkBoxNovorođenčeHiperbilirubinemija.Location = new System.Drawing.Point(210, 137);
+            this.chkBoxNovorođenčeHiperbilirubinemija.Name = "chkBoxNovorođenčeHiperbilirubinemija";
+            this.chkBoxNovorođenčeHiperbilirubinemija.Size = new System.Drawing.Size(108, 17);
+            this.chkBoxNovorođenčeHiperbilirubinemija.TabIndex = 16;
+            this.chkBoxNovorođenčeHiperbilirubinemija.Text = "hiperbilirubinemija";
+            this.chkBoxNovorođenčeHiperbilirubinemija.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxNovorođenčeSepsa
+            // 
+            this.chkBoxNovorođenčeSepsa.AutoSize = true;
+            this.chkBoxNovorođenčeSepsa.Location = new System.Drawing.Point(210, 114);
+            this.chkBoxNovorođenčeSepsa.Name = "chkBoxNovorođenčeSepsa";
+            this.chkBoxNovorođenčeSepsa.Size = new System.Drawing.Size(54, 17);
+            this.chkBoxNovorođenčeSepsa.TabIndex = 15;
+            this.chkBoxNovorođenčeSepsa.Text = "sepsa";
+            this.chkBoxNovorođenčeSepsa.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxNovorođenčeMehVentilacija
+            // 
+            this.chkBoxNovorođenčeMehVentilacija.AutoSize = true;
+            this.chkBoxNovorođenčeMehVentilacija.Location = new System.Drawing.Point(210, 91);
+            this.chkBoxNovorođenčeMehVentilacija.Name = "chkBoxNovorođenčeMehVentilacija";
+            this.chkBoxNovorođenčeMehVentilacija.Size = new System.Drawing.Size(161, 17);
+            this.chkBoxNovorođenčeMehVentilacija.TabIndex = 14;
+            this.chkBoxNovorođenčeMehVentilacija.Text = "mehanička ventilacija (>72h)";
+            this.chkBoxNovorođenčeMehVentilacija.UseVisualStyleBackColor = true;
+            this.chkBoxNovorođenčeMehVentilacija.CheckedChanged += new System.EventHandler(this.chkBoxNovorođenčeMehV_CheckedChanged);
+            // 
+            // chkBoxNovorođenčeRDS
+            // 
+            this.chkBoxNovorođenčeRDS.AutoSize = true;
+            this.chkBoxNovorođenčeRDS.Location = new System.Drawing.Point(210, 68);
+            this.chkBoxNovorođenčeRDS.Name = "chkBoxNovorođenčeRDS";
+            this.chkBoxNovorođenčeRDS.Size = new System.Drawing.Size(49, 17);
+            this.chkBoxNovorođenčeRDS.TabIndex = 13;
+            this.chkBoxNovorođenčeRDS.Text = "RDS";
+            this.chkBoxNovorođenčeRDS.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxNovorođenčeHipoglikemija
+            // 
+            this.chkBoxNovorođenčeHipoglikemija.AutoSize = true;
+            this.chkBoxNovorođenčeHipoglikemija.Location = new System.Drawing.Point(210, 45);
+            this.chkBoxNovorođenčeHipoglikemija.Name = "chkBoxNovorođenčeHipoglikemija";
+            this.chkBoxNovorođenčeHipoglikemija.Size = new System.Drawing.Size(86, 17);
+            this.chkBoxNovorođenčeHipoglikemija.TabIndex = 12;
+            this.chkBoxNovorođenčeHipoglikemija.Text = "hipoglikemija";
+            this.chkBoxNovorođenčeHipoglikemija.UseVisualStyleBackColor = true;
             // 
             // txtNovorodenceOpsegglave
             // 
@@ -668,283 +845,89 @@
             // 
             // txtOsnovnipodatciPrezime
             // 
-            this.txtOsnovnipodatciPrezime.Location = new System.Drawing.Point(65, 33);
+            this.txtOsnovnipodatciPrezime.Location = new System.Drawing.Point(61, 28);
             this.txtOsnovnipodatciPrezime.Name = "txtOsnovnipodatciPrezime";
             this.txtOsnovnipodatciPrezime.Size = new System.Drawing.Size(110, 20);
             this.txtOsnovnipodatciPrezime.TabIndex = 17;
             // 
             // txtOsnovnipodatciIme
             // 
-            this.txtOsnovnipodatciIme.Location = new System.Drawing.Point(65, 59);
+            this.txtOsnovnipodatciIme.Location = new System.Drawing.Point(61, 60);
             this.txtOsnovnipodatciIme.Name = "txtOsnovnipodatciIme";
             this.txtOsnovnipodatciIme.Size = new System.Drawing.Size(110, 20);
             this.txtOsnovnipodatciIme.TabIndex = 18;
             // 
             // txtOsnovnipodatciImemajke
             // 
-            this.txtOsnovnipodatciImemajke.Location = new System.Drawing.Point(274, 33);
+            this.txtOsnovnipodatciImemajke.Location = new System.Drawing.Point(252, 28);
             this.txtOsnovnipodatciImemajke.Name = "txtOsnovnipodatciImemajke";
             this.txtOsnovnipodatciImemajke.Size = new System.Drawing.Size(110, 20);
             this.txtOsnovnipodatciImemajke.TabIndex = 19;
             // 
             // txtOsnovnipodatciImeoca
             // 
-            this.txtOsnovnipodatciImeoca.Location = new System.Drawing.Point(274, 61);
+            this.txtOsnovnipodatciImeoca.Location = new System.Drawing.Point(252, 60);
             this.txtOsnovnipodatciImeoca.Name = "txtOsnovnipodatciImeoca";
             this.txtOsnovnipodatciImeoca.Size = new System.Drawing.Size(110, 20);
             this.txtOsnovnipodatciImeoca.TabIndex = 20;
             // 
             // txtOsnovnipodatciAdresa
             // 
-            this.txtOsnovnipodatciAdresa.Location = new System.Drawing.Point(514, 33);
+            this.txtOsnovnipodatciAdresa.Location = new System.Drawing.Point(484, 28);
             this.txtOsnovnipodatciAdresa.Name = "txtOsnovnipodatciAdresa";
             this.txtOsnovnipodatciAdresa.Size = new System.Drawing.Size(110, 20);
             this.txtOsnovnipodatciAdresa.TabIndex = 21;
             // 
             // txtOsnovnipodatciKontakttelefon
             // 
-            this.txtOsnovnipodatciKontakttelefon.Location = new System.Drawing.Point(514, 62);
+            this.txtOsnovnipodatciKontakttelefon.Location = new System.Drawing.Point(484, 59);
             this.txtOsnovnipodatciKontakttelefon.Name = "txtOsnovnipodatciKontakttelefon";
             this.txtOsnovnipodatciKontakttelefon.Size = new System.Drawing.Size(110, 20);
             this.txtOsnovnipodatciKontakttelefon.TabIndex = 22;
             // 
-            // button1
+            // groupBox9
             // 
-            this.button1.Location = new System.Drawing.Point(418, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 24);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Upiši";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtTestIspis
-            // 
-            this.txtTestIspis.Location = new System.Drawing.Point(644, 33);
-            this.txtTestIspis.Multiline = true;
-            this.txtTestIspis.Name = "txtTestIspis";
-            this.txtTestIspis.Size = new System.Drawing.Size(309, 286);
-            this.txtTestIspis.TabIndex = 24;
-            this.txtTestIspis.TextChanged += new System.EventHandler(this.txtTestIspis_TextChanged);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(514, 112);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Ispiši";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // chkBoxPatologijatrudnoceKrvarenje
-            // 
-            this.chkBoxPatologijatrudnoceKrvarenje.AutoSize = true;
-            this.chkBoxPatologijatrudnoceKrvarenje.Location = new System.Drawing.Point(7, 25);
-            this.chkBoxPatologijatrudnoceKrvarenje.Name = "chkBoxPatologijatrudnoceKrvarenje";
-            this.chkBoxPatologijatrudnoceKrvarenje.Size = new System.Drawing.Size(70, 17);
-            this.chkBoxPatologijatrudnoceKrvarenje.TabIndex = 3;
-            this.chkBoxPatologijatrudnoceKrvarenje.Text = "krvarenje";
-            this.chkBoxPatologijatrudnoceKrvarenje.UseVisualStyleBackColor = true;
-            this.chkBoxPatologijatrudnoceKrvarenje.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // chkBoxPatologijatrudnoceDijabetes
-            // 
-            this.chkBoxPatologijatrudnoceDijabetes.AutoSize = true;
-            this.chkBoxPatologijatrudnoceDijabetes.Location = new System.Drawing.Point(7, 48);
-            this.chkBoxPatologijatrudnoceDijabetes.Name = "chkBoxPatologijatrudnoceDijabetes";
-            this.chkBoxPatologijatrudnoceDijabetes.Size = new System.Drawing.Size(68, 17);
-            this.chkBoxPatologijatrudnoceDijabetes.TabIndex = 4;
-            this.chkBoxPatologijatrudnoceDijabetes.Text = "dijabetes";
-            this.chkBoxPatologijatrudnoceDijabetes.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxPatologijatrudnocePPI
-            // 
-            this.chkBoxPatologijatrudnocePPI.AutoSize = true;
-            this.chkBoxPatologijatrudnocePPI.Location = new System.Drawing.Point(7, 71);
-            this.chkBoxPatologijatrudnocePPI.Name = "chkBoxPatologijatrudnocePPI";
-            this.chkBoxPatologijatrudnocePPI.Size = new System.Drawing.Size(43, 17);
-            this.chkBoxPatologijatrudnocePPI.TabIndex = 5;
-            this.chkBoxPatologijatrudnocePPI.Text = "PPI";
-            this.chkBoxPatologijatrudnocePPI.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxPatologijatrudnoceInfekcije
-            // 
-            this.chkBoxPatologijatrudnoceInfekcije.AutoSize = true;
-            this.chkBoxPatologijatrudnoceInfekcije.Location = new System.Drawing.Point(7, 94);
-            this.chkBoxPatologijatrudnoceInfekcije.Name = "chkBoxPatologijatrudnoceInfekcije";
-            this.chkBoxPatologijatrudnoceInfekcije.Size = new System.Drawing.Size(65, 17);
-            this.chkBoxPatologijatrudnoceInfekcije.TabIndex = 6;
-            this.chkBoxPatologijatrudnoceInfekcije.Text = "infekcije";
-            this.chkBoxPatologijatrudnoceInfekcije.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxPatologijatrudnoceHipertenzija
-            // 
-            this.chkBoxPatologijatrudnoceHipertenzija.AutoSize = true;
-            this.chkBoxPatologijatrudnoceHipertenzija.Location = new System.Drawing.Point(7, 117);
-            this.chkBoxPatologijatrudnoceHipertenzija.Name = "chkBoxPatologijatrudnoceHipertenzija";
-            this.chkBoxPatologijatrudnoceHipertenzija.Size = new System.Drawing.Size(79, 17);
-            this.chkBoxPatologijatrudnoceHipertenzija.TabIndex = 7;
-            this.chkBoxPatologijatrudnoceHipertenzija.Text = "hipertenzija";
-            this.chkBoxPatologijatrudnoceHipertenzija.UseVisualStyleBackColor = true;
-            this.chkBoxPatologijatrudnoceHipertenzija.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
-            // 
-            // chkBoxPatologijatrudnoceEPH
-            // 
-            this.chkBoxPatologijatrudnoceEPH.AutoSize = true;
-            this.chkBoxPatologijatrudnoceEPH.Location = new System.Drawing.Point(7, 140);
-            this.chkBoxPatologijatrudnoceEPH.Name = "chkBoxPatologijatrudnoceEPH";
-            this.chkBoxPatologijatrudnoceEPH.Size = new System.Drawing.Size(48, 17);
-            this.chkBoxPatologijatrudnoceEPH.TabIndex = 8;
-            this.chkBoxPatologijatrudnoceEPH.Text = "EPH";
-            this.chkBoxPatologijatrudnoceEPH.UseVisualStyleBackColor = true;
-            this.chkBoxPatologijatrudnoceEPH.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
-            // 
-            // chkBoxNovorođenčeHipoglikemija
-            // 
-            this.chkBoxNovorođenčeHipoglikemija.AutoSize = true;
-            this.chkBoxNovorođenčeHipoglikemija.Location = new System.Drawing.Point(210, 45);
-            this.chkBoxNovorođenčeHipoglikemija.Name = "chkBoxNovorođenčeHipoglikemija";
-            this.chkBoxNovorođenčeHipoglikemija.Size = new System.Drawing.Size(86, 17);
-            this.chkBoxNovorođenčeHipoglikemija.TabIndex = 12;
-            this.chkBoxNovorođenčeHipoglikemija.Text = "hipoglikemija";
-            this.chkBoxNovorođenčeHipoglikemija.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(635, 325);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 13;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxNovorođenčeRDS
-            // 
-            this.chkBoxNovorođenčeRDS.AutoSize = true;
-            this.chkBoxNovorođenčeRDS.Location = new System.Drawing.Point(210, 68);
-            this.chkBoxNovorođenčeRDS.Name = "chkBoxNovorođenčeRDS";
-            this.chkBoxNovorođenčeRDS.Size = new System.Drawing.Size(49, 17);
-            this.chkBoxNovorođenčeRDS.TabIndex = 13;
-            this.chkBoxNovorođenčeRDS.Text = "RDS";
-            this.chkBoxNovorođenčeRDS.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxNovorođenčeMehVentilacija
-            // 
-            this.chkBoxNovorođenčeMehVentilacija.AutoSize = true;
-            this.chkBoxNovorođenčeMehVentilacija.Location = new System.Drawing.Point(210, 91);
-            this.chkBoxNovorođenčeMehVentilacija.Name = "chkBoxNovorođenčeMehVentilacija";
-            this.chkBoxNovorođenčeMehVentilacija.Size = new System.Drawing.Size(161, 17);
-            this.chkBoxNovorođenčeMehVentilacija.TabIndex = 14;
-            this.chkBoxNovorođenčeMehVentilacija.Text = "mehanička ventilacija (>72h)";
-            this.chkBoxNovorođenčeMehVentilacija.UseVisualStyleBackColor = true;
-            this.chkBoxNovorođenčeMehVentilacija.CheckedChanged += new System.EventHandler(this.chkBoxNovorođenčeMehV_CheckedChanged);
-            // 
-            // chkBoxNovorođenčeSepsa
-            // 
-            this.chkBoxNovorođenčeSepsa.AutoSize = true;
-            this.chkBoxNovorođenčeSepsa.Location = new System.Drawing.Point(210, 114);
-            this.chkBoxNovorođenčeSepsa.Name = "chkBoxNovorođenčeSepsa";
-            this.chkBoxNovorođenčeSepsa.Size = new System.Drawing.Size(54, 17);
-            this.chkBoxNovorođenčeSepsa.TabIndex = 15;
-            this.chkBoxNovorođenčeSepsa.Text = "sepsa";
-            this.chkBoxNovorođenčeSepsa.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxNovorođenčeHiperbilirubinemija
-            // 
-            this.chkBoxNovorođenčeHiperbilirubinemija.AutoSize = true;
-            this.chkBoxNovorođenčeHiperbilirubinemija.Location = new System.Drawing.Point(210, 137);
-            this.chkBoxNovorođenčeHiperbilirubinemija.Name = "chkBoxNovorođenčeHiperbilirubinemija";
-            this.chkBoxNovorođenčeHiperbilirubinemija.Size = new System.Drawing.Size(108, 17);
-            this.chkBoxNovorođenčeHiperbilirubinemija.TabIndex = 16;
-            this.chkBoxNovorođenčeHiperbilirubinemija.Text = "hiperbilirubinemija";
-            this.chkBoxNovorođenčeHiperbilirubinemija.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxNovorođenčeKonvulzije
-            // 
-            this.chkBoxNovorođenčeKonvulzije.AutoSize = true;
-            this.chkBoxNovorođenčeKonvulzije.Location = new System.Drawing.Point(210, 160);
-            this.chkBoxNovorođenčeKonvulzije.Name = "chkBoxNovorođenčeKonvulzije";
-            this.chkBoxNovorođenčeKonvulzije.Size = new System.Drawing.Size(73, 17);
-            this.chkBoxNovorođenčeKonvulzije.TabIndex = 17;
-            this.chkBoxNovorođenčeKonvulzije.Text = "konvulzije";
-            this.chkBoxNovorođenčeKonvulzije.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxNovorođenčePVL
-            // 
-            this.chkBoxNovorođenčePVL.AutoSize = true;
-            this.chkBoxNovorođenčePVL.Location = new System.Drawing.Point(210, 183);
-            this.chkBoxNovorođenčePVL.Name = "chkBoxNovorođenčePVL";
-            this.chkBoxNovorođenčePVL.Size = new System.Drawing.Size(46, 17);
-            this.chkBoxNovorođenčePVL.TabIndex = 18;
-            this.chkBoxNovorođenčePVL.Text = "PVL";
-            this.chkBoxNovorođenčePVL.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxNovorođenčePVIVH
-            // 
-            this.chkBoxNovorođenčePVIVH.AutoSize = true;
-            this.chkBoxNovorođenčePVIVH.Location = new System.Drawing.Point(210, 206);
-            this.chkBoxNovorođenčePVIVH.Name = "chkBoxNovorođenčePVIVH";
-            this.chkBoxNovorođenčePVIVH.Size = new System.Drawing.Size(67, 17);
-            this.chkBoxNovorođenčePVIVH.TabIndex = 19;
-            this.chkBoxNovorođenčePVIVH.Text = "PV - IVH";
-            this.chkBoxNovorođenčePVIVH.UseVisualStyleBackColor = true;
-            this.chkBoxNovorođenčePVIVH.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
-            // 
-            // chkBoxNovorođenčeNEC
-            // 
-            this.chkBoxNovorođenčeNEC.AutoSize = true;
-            this.chkBoxNovorođenčeNEC.Location = new System.Drawing.Point(210, 229);
-            this.chkBoxNovorođenčeNEC.Name = "chkBoxNovorođenčeNEC";
-            this.chkBoxNovorođenčeNEC.Size = new System.Drawing.Size(48, 17);
-            this.chkBoxNovorođenčeNEC.TabIndex = 20;
-            this.chkBoxNovorođenčeNEC.Text = "NEC";
-            this.chkBoxNovorođenčeNEC.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxNovorođenčeROP
-            // 
-            this.chkBoxNovorođenčeROP.AutoSize = true;
-            this.chkBoxNovorođenčeROP.Location = new System.Drawing.Point(210, 252);
-            this.chkBoxNovorođenčeROP.Name = "chkBoxNovorođenčeROP";
-            this.chkBoxNovorođenčeROP.Size = new System.Drawing.Size(49, 17);
-            this.chkBoxNovorođenčeROP.TabIndex = 21;
-            this.chkBoxNovorođenčeROP.Text = "ROP";
-            this.chkBoxNovorođenčeROP.UseVisualStyleBackColor = true;
+            this.groupBox9.Controls.Add(this.label3);
+            this.groupBox9.Controls.Add(this.txtOsnovnipodatciKontakttelefon);
+            this.groupBox9.Controls.Add(this.txtOsnovnipodatciPrezime);
+            this.groupBox9.Controls.Add(this.txtOsnovnipodatciAdresa);
+            this.groupBox9.Controls.Add(this.label4);
+            this.groupBox9.Controls.Add(this.txtOsnovnipodatciSpol);
+            this.groupBox9.Controls.Add(this.txtOsnovnipodatciImeoca);
+            this.groupBox9.Controls.Add(this.label9);
+            this.groupBox9.Controls.Add(this.txtOsnovnipodatciDatumrođenja);
+            this.groupBox9.Controls.Add(this.txtOsnovnipodatciIme);
+            this.groupBox9.Controls.Add(this.label10);
+            this.groupBox9.Controls.Add(this.txtOsnovnipodatciImemajke);
+            this.groupBox9.Controls.Add(this.label5);
+            this.groupBox9.Controls.Add(this.label6);
+            this.groupBox9.Controls.Add(this.label7);
+            this.groupBox9.Controls.Add(this.label8);
+            this.groupBox9.Location = new System.Drawing.Point(15, 23);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(671, 164);
+            this.groupBox9.TabIndex = 23;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Osnovni podatci";
+            this.groupBox9.Enter += new System.EventHandler(this.groupBox9_Enter);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 749);
-            this.Controls.Add(this.checkBox1);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(837, 727);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.txtTestIspis);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtOsnovnipodatciKontakttelefon);
-            this.Controls.Add(this.txtOsnovnipodatciAdresa);
-            this.Controls.Add(this.txtOsnovnipodatciImeoca);
-            this.Controls.Add(this.txtOsnovnipodatciImemajke);
-            this.Controls.Add(this.txtOsnovnipodatciIme);
-            this.Controls.Add(this.txtOsnovnipodatciPrezime);
+            this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.txtOsnovnipodatciSpol);
-            this.Controls.Add(this.txtOsnovnipodatciDatumrođenja);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Neonatologija";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -961,14 +944,13 @@
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox txtTrudnoćaParitet;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1028,7 +1010,6 @@
         private System.Windows.Forms.TextBox txtNovorodenceRodnaduljina;
         private System.Windows.Forms.TextBox txtNovorodenceRodnamasa;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox txtTestIspis;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox chkBoxPatologijatrudnoceHipertenzija;
         private System.Windows.Forms.CheckBox chkBoxPatologijatrudnoceInfekcije;
@@ -1045,8 +1026,8 @@
         private System.Windows.Forms.CheckBox chkBoxNovorođenčeMehVentilacija;
         private System.Windows.Forms.CheckBox chkBoxNovorođenčeRDS;
         private System.Windows.Forms.CheckBox chkBoxNovorođenčeHipoglikemija;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox chkBoxNovorođenčeROP;
+        private System.Windows.Forms.GroupBox groupBox9;
     }
 }
 
