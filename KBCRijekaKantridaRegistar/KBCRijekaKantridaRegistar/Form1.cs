@@ -5,6 +5,7 @@ using System.Xml;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
+using System.Drawing;
 
 namespace KBCRijekaKantridaRegistar
 
@@ -621,11 +622,6 @@ namespace KBCRijekaKantridaRegistar
 
         }
 
-        private void txtTestIspis_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void chkBoxPorodPROM_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -657,6 +653,348 @@ namespace KBCRijekaKantridaRegistar
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtOsnovnipodatciIme_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //----------------------------------------Enter - Leave ----------------------------------------
+
+        // Ime
+        private void txtOsnovnipodatciIme_Enter(object sender, EventArgs e)
+        {
+            if(txtOsnovnipodatciIme.Text == "Ime")
+            {
+                txtOsnovnipodatciIme.Text = "";
+                txtOsnovnipodatciIme.ForeColor = Color.Black;
+            }
+        }
+        private void txtOsnovnipodatciIme_Leave(object sender, EventArgs e)
+        {
+            if(txtOsnovnipodatciIme.Text == "")
+            {
+                txtOsnovnipodatciIme.Text = "Ime";
+                txtOsnovnipodatciIme.ForeColor = Color.Gray;
+            }
+        }
+            // Prezime
+       private void txtOsnovnipodatciPrezime_Enter(object sender, EventArgs e)
+        {
+            if (txtOsnovnipodatciPrezime.Text == "Prezime")
+            {
+                txtOsnovnipodatciPrezime.Text = "";
+                txtOsnovnipodatciPrezime.ForeColor = Color.Black;
+            }
+        }
+        private void txtOsnovnipodatciPrezime_Leave(object sender, EventArgs e)
+        {
+            if (txtOsnovnipodatciPrezime.Text == "")
+            {
+                txtOsnovnipodatciPrezime.Text = "Prezime";
+                txtOsnovnipodatciPrezime.ForeColor = Color.Gray;
+            }
+        }
+            // Spol
+            
+        private void txtOsnovnipodatciSpol_Enter(object sender, EventArgs e)
+        {
+
+            if (txtOsnovnipodatciSpol.Text == "Spol")
+            {
+                txtOsnovnipodatciSpol.Text = "";
+                txtOsnovnipodatciSpol.ForeColor = Color.Black;
+            }
+        }
+        private void txtOsnovnipodatciSpol_Leave(object sender, EventArgs e)
+        {
+            if (txtOsnovnipodatciSpol.Text == "")
+            {
+                txtOsnovnipodatciSpol.Text = "Spol";
+                txtOsnovnipodatciSpol.ForeColor = Color.Gray;
+            }
+        }
+        // Ime oca
+        private void txtOsnovnipodatciImeOca_Enter(object sender, EventArgs e)
+        {
+            if (txtOsnovnipodatciImeoca.Text == "Ime oca")
+            {
+                txtOsnovnipodatciImeoca.Text = "";
+                txtOsnovnipodatciImeoca.ForeColor = Color.Black;
+            }
+        }
+        private void txtOsnovnipodatciImeOca_Leave(object sender, EventArgs e)
+        {
+            if (txtOsnovnipodatciImeoca.Text == "")
+            {
+                txtOsnovnipodatciImeoca.Text = "Ime oca";
+                txtOsnovnipodatciImeoca.ForeColor = Color.Gray;
+            }
+        }
+            // IME MAJKE
+        private void txtOsnovnipodatciImeMajke_Enter(object sender, EventArgs e)
+        {
+            if (txtOsnovnipodatciImemajke.Text == "Ime majke")
+            {
+                txtOsnovnipodatciImemajke.Text = "";
+                txtOsnovnipodatciImemajke.ForeColor = Color.Black;
+            }
+        }
+        private void txtOsnovnipodatciImeMajke_Leave(object sender, EventArgs e)
+        {
+            if (txtOsnovnipodatciImemajke.Text == "")
+            {
+                txtOsnovnipodatciImemajke.Text = "Ime majke";
+                txtOsnovnipodatciImemajke.ForeColor = Color.Gray;
+            }
+        }
+            // Adresa
+        private void txtOsnovnipodatciAdresa_Enter(object sender, EventArgs e)
+        {
+            if (txtOsnovnipodatciAdresa.Text == "Adresa")
+            {
+                txtOsnovnipodatciAdresa.Text = "";
+                txtOsnovnipodatciAdresa.ForeColor = Color.Black;
+            }
+        }
+        private void txtOsnovnipodatciAdresa_Leave(object sender, EventArgs e)
+        {
+            if (txtOsnovnipodatciAdresa.Text == "")
+            {
+                txtOsnovnipodatciAdresa.Text = "Adresa";
+                txtOsnovnipodatciAdresa.ForeColor = Color.Gray;
+            }
+        }
+            // Kontakt telefon
+        private void txtOsnovnipodatciKontakttelefon_Enter(object sender, EventArgs e)
+        {
+            if (txtOsnovnipodatciKontakttelefon.Text == "Kontakt telefon")
+            {
+                txtOsnovnipodatciKontakttelefon.Text = "";
+                txtOsnovnipodatciKontakttelefon.ForeColor = Color.Black;
+            }
+        }
+        private void txtOsnovnipodatciKontakttelefon_Leave(object sender, EventArgs e)
+        {
+            if (txtOsnovnipodatciKontakttelefon.Text == "")
+            {
+                txtOsnovnipodatciKontakttelefon.Text = "Kontakt telefon";
+                txtOsnovnipodatciKontakttelefon.ForeColor = Color.Gray;
+            }
+        }
+        // Gestacijska dob - Tjedana
+        private void txtGestacijskadobTjedana_Enter(object sender, EventArgs e)
+        {
+            if (txtGestacijskadobTjedana.Text == "Tjedana")
+            {
+
+                txtGestacijskadobTjedana.Text = "";
+                txtGestacijskadobTjedana.ForeColor = Color.Black;
+            }
+        }
+        private void txtGestacijskadobTjedana_Leave(object sender, EventArgs e)
+        {
+            if (txtGestacijskadobTjedana.Text == "")
+            {
+                txtGestacijskadobTjedana.Text = "Tjedana";
+                txtGestacijskadobTjedana.ForeColor = Color.Gray;
+            }
+        }
+        // Gestacijska dob - Dana
+        private void txtGestacijskadobDana_Enter(object sender, EventArgs e)
+        {
+            if (txtGestacijskadobDana.Text == "Dana")
+            {
+
+                txtGestacijskadobDana.Text = "";
+                txtGestacijskadobDana.ForeColor = Color.Black;
+            }
+        }
+        private void txtGestacijskadobDana_Leave(object sender, EventArgs e)
+        {
+            if (txtGestacijskadobDana.Text == "")
+            {
+                txtGestacijskadobDana.Text = "Dana";
+                txtGestacijskadobDana.ForeColor = Color.Gray;
+            }
+        }
+        // Rodna masa
+        private void txtNovorodenceRodnamasa_Enter(object sender, EventArgs e)
+        {
+            if (txtNovorodenceRodnamasa.Text == "Rodna masa (RM/g)")
+            {
+
+                txtNovorodenceRodnamasa.Text = "";
+                txtNovorodenceRodnamasa.ForeColor = Color.Black;
+            }
+        }
+        private void txtNovorodenceRodnamasa_Leave(object sender, EventArgs e)
+        {
+            if (txtNovorodenceRodnamasa.Text == "")
+            {
+                txtNovorodenceRodnamasa.Text = "Rodna masa (RM/g)";
+                txtNovorodenceRodnamasa.ForeColor = Color.Gray;
+            }
+        }
+
+        // Rodna duljina
+        private void txtNovorodenceRodnaduljina_Enter(object sender, EventArgs e)
+        {
+            if(txtNovorodenceRodnaduljina.Text == "Rodna duljina (RD/cm)")
+            {
+
+                txtNovorodenceRodnaduljina.Text = "";
+                txtNovorodenceRodnaduljina.ForeColor = Color.Black;
+            }
+        }
+        private void txtNovorodenceRodnaduljina_Leave(object sender, EventArgs e)
+        {
+            if (txtNovorodenceRodnaduljina.Text == "")
+            {
+
+                txtNovorodenceRodnaduljina.Text = "Rodna duljina (RD/cm)";
+                txtNovorodenceRodnaduljina.ForeColor = Color.Gray;
+            }
+        }
+
+        // Opseg glave
+        private void txtNovorodenceOpsegglave_Enter(object sender, EventArgs e)
+        {
+            if (txtNovorodenceOpsegglave.Text == "Opseg glave (OG/cm)")
+            {
+                txtNovorodenceOpsegglave.Text = "";
+                txtNovorodenceOpsegglave.ForeColor = Color.Black;
+            }
+        }
+        private void txtNovorodenceOpsegglave_Leave(object sender, EventArgs e)
+        {
+            if (txtNovorodenceOpsegglave.Text == "")
+            {
+                txtNovorodenceOpsegglave.Text = "Opseg glave (OG/cm)";
+                txtNovorodenceOpsegglave.ForeColor = Color.Gray;
+            }
+        }
+
+        // Apgar indeks
+        private void txtNovorodenceApgarindeks_Enter(object sender, EventArgs e)
+        {
+            
+            if (txtNovorodenceApgarindeks.Text == "Apgar indeks")
+            {
+                txtNovorodenceApgarindeks.Text = "";
+                txtNovorodenceApgarindeks.ForeColor = Color.Black;
+            }
+        }
+        private void txtNovorodenceApgarindeks_Leave(object sender, EventArgs e)
+        {
+            if (txtNovorodenceApgarindeks.Text == "")
+            {
+                txtNovorodenceApgarindeks.Text = "Apgar indeks";
+                txtNovorodenceApgarindeks.ForeColor = Color.Gray;
+            }
+        }
+
+        // Paritet
+        private void txtTrudnocaParitet_Enter(object sender, EventArgs e)
+        {
+            if (txtTrudnoćaParitet.Text == "Paritet")
+            {
+
+                txtTrudnoćaParitet.Text = "";
+                txtTrudnoćaParitet.ForeColor = Color.Black;
+            }
+        }
+        private void txtTrudnocaParitet_Leave(object sender, EventArgs e)
+        {
+            if (txtTrudnoćaParitet.Text == "")
+            {
+                txtTrudnoćaParitet.Text = "Paritet";
+                txtTrudnoćaParitet.ForeColor = Color.Gray;
+            }
+        }
+
+        // Kortikosteroidna profilaksa
+        private void txtPorodKortikosteroidnaprofilaksa_Enter(object sender, EventArgs e)
+        {
+            
+            if (txtPorodKortikosteroidnaprofilaksa.Text == "Kortikosteroidna profilaksa")
+            {
+
+                txtPorodKortikosteroidnaprofilaksa.Text = "";
+                txtPorodKortikosteroidnaprofilaksa.ForeColor = Color.Black;
+            }
+        }
+        private void txtPorodKortikosteroidnaprofilaksa_Leave(object sender, EventArgs e)
+        {
+            if (txtPorodKortikosteroidnaprofilaksa.Text == "")
+            {
+                txtPorodKortikosteroidnaprofilaksa.Text = "Kortikosteroidna profilaksa";
+                txtPorodKortikosteroidnaprofilaksa.ForeColor = Color.Gray;
+            }
+        }
+
+        // Stav djeteta
+        private void txtPorodStavdjeteta_Enter(object sender, EventArgs e)
+        {
+             if (txtPorodStavdjeteta.Text == "Stav djeteta")
+            {
+
+                txtPorodStavdjeteta.Text = "";
+                txtPorodStavdjeteta.ForeColor = Color.Black;
+            }
+        }
+        private void txtPorodStavdjeteta_Leave(object sender, EventArgs e)
+        {
+            if (txtPorodStavdjeteta.Text == "")
+            {
+
+                txtPorodStavdjeteta.Text = "Stav djeteta";
+                txtPorodStavdjeteta.ForeColor = Color.Black;
+            }
+
+        }
+
+        // Trajanje poroda
+        private void txtPorodTrajanjeporoda_Enter(object sender, EventArgs e)
+        {
+            
+            if (txtPorodTrajanjeporoda.Text == "Trajanje poroda")
+            {
+
+                txtPorodTrajanjeporoda.Text = "";
+                txtPorodTrajanjeporoda.ForeColor = Color.Black;
+            }
+        }
+        private void txtPorodTrajanjeporoda_Leave(object sender, EventArgs e)
+        {
+            if (txtPorodTrajanjeporoda.Text == "")
+            {
+                txtPorodTrajanjeporoda.Text = "Trajanje poroda";
+                txtPorodTrajanjeporoda.ForeColor = Color.Gray;
+            }
+        }
+
+
+
+        private void txtNovorodenceRodnamasa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTrudnoćaParitet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPorodStavdjeteta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
