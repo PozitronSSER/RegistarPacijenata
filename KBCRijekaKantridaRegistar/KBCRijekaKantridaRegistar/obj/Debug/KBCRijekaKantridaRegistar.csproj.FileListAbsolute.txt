@@ -67,3 +67,4 @@ C:\Users\manue\Source\Repos\RegistarPacijenata3\KBCRijekaKantridaRegistar\KBCRij
 C:\Users\manue\Source\Repos\RegistarPacijenata3\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.csproj.CoreCompileInputs.cache
 C:\Users\manue\Source\Repos\RegistarPacijenata3\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.exe
 C:\Users\manue\Source\Repos\RegistarPacijenata3\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.pdb
+C:\Users\Karlo\source\repos\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.PregledPodataka.resources
