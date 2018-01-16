@@ -1038,5 +1038,10 @@ namespace KBCRijekaKantridaRegistar
         {
             ResetVarijabli();
         }
+
+        private void txtOsnovnipodatciImeoca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
