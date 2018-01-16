@@ -615,7 +615,7 @@ namespace KBCRijekaKantridaRegistar
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            // ovaj btn neka otvara pregled podataka
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
