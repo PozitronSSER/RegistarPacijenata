@@ -68,3 +68,14 @@ C:\Users\manue\Source\Repos\RegistarPacijenata3\KBCRijekaKantridaRegistar\KBCRij
 C:\Users\manue\Source\Repos\RegistarPacijenata3\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.exe
 C:\Users\manue\Source\Repos\RegistarPacijenata3\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.pdb
 C:\Users\Karlo\source\repos\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.PregledPodataka.resources
+C:\Users\manue\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\bin\Debug\KBCRijekaKantridaRegistar.exe.config
+C:\Users\manue\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\bin\Debug\KBCRijekaKantridaRegistar.exe
+C:\Users\manue\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\bin\Debug\KBCRijekaKantridaRegistar.pdb
+C:\Users\manue\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.csprojResolveAssemblyReference.cache
+C:\Users\manue\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.Form1.resources
+C:\Users\manue\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.PregledPodataka.resources
+C:\Users\manue\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.Properties.Resources.resources
+C:\Users\manue\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.csproj.GenerateResource.Cache
+C:\Users\manue\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.csproj.CoreCompileInputs.cache
+C:\Users\manue\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.exe
+C:\Users\manue\Desktop\RegistarPacijenata-master\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.pdb

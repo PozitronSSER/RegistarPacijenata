@@ -26,5 +26,10 @@ namespace KBCRijekaKantridaRegistar
             dataGridView1.DataSource = PacijentData;
             dataGridView1.DataMember = "Pacijent";
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
