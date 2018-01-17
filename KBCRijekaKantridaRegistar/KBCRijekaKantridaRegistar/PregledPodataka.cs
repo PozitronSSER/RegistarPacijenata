@@ -19,10 +19,9 @@ namespace KBCRijekaKantridaRegistar
 
         private void PregledPodataka_Load(object sender, EventArgs e)
         {
+            //ucitavanje XML datoteke
             string filePath = Application.StartupPath + "/Registar.xml";
-
             PacijentData.ReadXml(filePath);
-
             dataGridView1.DataSource = PacijentData;
             dataGridView1.DataMember = "Pacijent";
         }

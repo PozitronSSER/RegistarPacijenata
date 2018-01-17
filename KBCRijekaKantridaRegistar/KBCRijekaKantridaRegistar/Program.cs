@@ -8,16 +8,14 @@ namespace KBCRijekaKantridaRegistar
 {
     static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+       
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // ovo ćemo najvjerojatnije izmijeniti, kada budemo radili GUI
+           //pokretanje forme za unos
             Application.Run(new Form1());
 
         }
