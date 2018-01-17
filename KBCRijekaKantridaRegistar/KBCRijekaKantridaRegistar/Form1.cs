@@ -387,9 +387,9 @@ namespace KBCRijekaKantridaRegistar
                         xmlWriter.WriteElementString("Paritet_trudnoće", paritetTrudnoce);
                         xmlWriter.WriteElementString("Plodnost_trudnoće", trudnocaPlodna);
                         xmlWriter.WriteElementString("Priroda_trudnoće", trudnocaPrirodna);
-                        xmlWriter.WriteElementString("Način_Poroda", nacinPoroda);
+                        xmlWriter.WriteElementString("Način_poroda", nacinPoroda);
                         xmlWriter.WriteElementString("Trajanje_poroda", trajanjePoroda);
-                        xmlWriter.WriteElementString("Stavdjeteta", stavDjeteta);
+                        xmlWriter.WriteElementString("Stav_djeteta", stavDjeteta);
                         xmlWriter.WriteElementString("Profilaksa", profilaksa);
                         xmlWriter.WriteElementString("PROM", prom);
                         xmlWriter.WriteElementString("Ferbrilitet", febrilitetRodilje);
@@ -413,7 +413,7 @@ namespace KBCRijekaKantridaRegistar
                         xmlWriter.WriteElementString("RDS", rds);
                         xmlWriter.WriteElementString("Mehanička_ventilacija", mehaničkaventilacija);
                         xmlWriter.WriteElementString("Sepsa", sepsa);
-                        xmlWriter.WriteElementString("Hiperbilitubinemija", hiperbilirubinemija);
+                        xmlWriter.WriteElementString("Hiperbilirubinemija", hiperbilirubinemija);
                         xmlWriter.WriteElementString("Konvulzije", konvulzije);
                         xmlWriter.WriteElementString("PVL", pvl);
                         xmlWriter.WriteElementString("PV-IVH", pv_ivh);
@@ -446,7 +446,7 @@ namespace KBCRijekaKantridaRegistar
                         new XElement("Spol", spol),
                         new XElement("Paritet_trudnoće", paritetTrudnoce),
                         new XElement("Plodnost_trudnoće", trudnocaPlodna),
-                        new XElement("Priroda_trudnće", trudnocaPrirodna),
+                        new XElement("Priroda_trudnoće", trudnocaPrirodna),
                         new XElement("Način_poroda", nacinPoroda),
                         new XElement("Trajanje_poroda", trajanjePoroda),
                         new XElement("Stav_djeteta", stavDjeteta),
@@ -1040,6 +1040,11 @@ namespace KBCRijekaKantridaRegistar
         }
 
         private void txtOsnovnipodatciImeoca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbtnVaginalno_CheckedChanged(object sender, EventArgs e)
         {
 
         }

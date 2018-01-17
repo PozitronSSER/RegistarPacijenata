@@ -492,14 +492,13 @@
             // rbtnVaginalno
             // 
             this.rbtnVaginalno.AutoSize = true;
-            this.rbtnVaginalno.Checked = true;
             this.rbtnVaginalno.Location = new System.Drawing.Point(3, 16);
             this.rbtnVaginalno.Name = "rbtnVaginalno";
             this.rbtnVaginalno.Size = new System.Drawing.Size(95, 26);
             this.rbtnVaginalno.TabIndex = 46;
-            this.rbtnVaginalno.TabStop = true;
             this.rbtnVaginalno.Text = "vaginalno";
             this.rbtnVaginalno.UseVisualStyleBackColor = true;
+            this.rbtnVaginalno.CheckedChanged += new System.EventHandler(this.rbtnVaginalno_CheckedChanged);
             // 
             // groupBox8
             // 
