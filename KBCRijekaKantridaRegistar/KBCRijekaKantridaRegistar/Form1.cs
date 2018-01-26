@@ -43,6 +43,112 @@ namespace KBCRijekaKantridaRegistar
 
 
 
+                //Provjera podataka početak
+
+                if(txtOsnovnipodatciIme.Text == "Ime")
+                {
+                    MessageBox.Show("Ime mora biti uneseno");
+                    goto Kraj;
+                }
+                if (txtOsnovnipodatciPrezime.Text == "Prezime")
+                {
+                    MessageBox.Show("Prezime mora biti uneseno");
+                    goto Kraj;
+                }
+                if (txtOsnovnipodatciSpol.Text == "Spol")
+                {
+                    MessageBox.Show("Spol mora biti odabran");
+                    goto Kraj;
+                }
+                if (txtOsnovnipodatciAdresa.Text == "Adresa")
+                {
+                    MessageBox.Show("Adresa mora biti unesena");
+                    goto Kraj;
+                }
+                if (txtOsnovnipodatciImemajke.Text == "Ime majke")
+                {
+                    MessageBox.Show("Ime majke mora biti uneseno");
+                    goto Kraj;
+                }
+                if (txtOsnovnipodatciImeoca.Text == "Ime oca")
+                {
+                    MessageBox.Show("Ime oca mora biti uneseno");
+                    goto Kraj;
+                }
+                if (txtOsnovnipodatciKontakttelefon.Text == "Kontakt telefon")
+                {
+                    MessageBox.Show("Telefon mora biti unesen");
+                    goto Kraj;
+                }
+                if (txtTrudnoćaParitet.Text == "Paritet")
+                {
+                    MessageBox.Show("Paritet mora biti unesen");
+                    goto Kraj;
+                }
+                if (txtPorodTrajanjeporoda.Text == "Trajanje poroda")
+                {
+                    MessageBox.Show("Trajanje poroda mora biti uneseno");
+                    goto Kraj;
+                }
+                if (txtPorodKortikosteroidnaprofilaksa.Text == "Kortikosteroidna profilaksa")
+                {
+                    MessageBox.Show("Kortikosteroidna profilaksa mora biti unesena");
+                    goto Kraj;
+                }
+                if (txtGestacijskadobTjedana.Text == "Tjedana")
+                {
+                    MessageBox.Show("Gestacijska dob tjedni mora biti unesena");
+                    goto Kraj;
+                }
+                if (txtGestacijskadobDana.Text == "Dana")
+                {
+                    MessageBox.Show("Gestacijska dob dani mora biti unesena");
+                    goto Kraj;
+                }
+                if (txtNovorodenceRodnamasa.Text == "Rodna masa (RM/g)")
+                {
+                    MessageBox.Show("Rodna masa mora biti unesena");
+                    goto Kraj;
+                }
+                if (txtNovorodenceRodnaduljina.Text == "Rodna duljina (RD/cm)")
+                {
+                    MessageBox.Show("Rodna duljina mora biti unesena");
+                    goto Kraj;
+                }
+                if (txtNovorodenceOpsegglave.Text == "Opseg glave (OG/cm)")
+                {
+                    MessageBox.Show("Opseg glave mora biti unesen");
+                    goto Kraj;
+                }
+                if (txtNovorodenceApgarindeks.Text == "Apgar indeks")
+                {
+                    MessageBox.Show("Apgar indeks mora biti unesen");
+                    goto Kraj;
+                }
+                if (txtPorodStavdjeteta.Text == "Stav djeteta")
+                {
+                    MessageBox.Show("Stav djeteta mora biti unesen");
+                    goto Kraj;
+                }
+                if (!rbtnTrunocaJednoplodna.Checked && !rbtnTrunocaViseplodna.Checked)
+                {
+                    MessageBox.Show("Plodnost trudnoće mora biti odabrana");
+                    goto Kraj;
+                }
+                if (!rbtnVaginalno.Checked && !rbtnPorodCarskirez.Checked)
+                {
+                    MessageBox.Show("Način poroda mora biti odabran");
+                    goto Kraj;
+                }
+                if (!rbtnTrunocaPotpomognuta.Checked && !rbtnTrunocaPrirodna.Checked)
+                {
+                    MessageBox.Show("Priroda trudnoće mora biti odabrana");
+                    goto Kraj;
+                }
+
+
+
+
 
                 //Dodjela vrijednosti prijelaznim varijablama
                 gestacijskaDobTjedana = Convert.ToInt32(txtGestacijskadobTjedana.Text);
@@ -147,9 +253,9 @@ namespace KBCRijekaKantridaRegistar
                     rop = "2";
 
                 if (ostaloKomplikacije == "True")
-                    ostaloTextKomplikacije = "1";
+                    ostaloTextKomplikacije = txtNovorođenčeOstalo.Text;
                 else
-                    ostaloTextKomplikacije = "2";
+                    ostaloTextKomplikacije = " ";
 
 
                 if (ostaloPatologija == "True")

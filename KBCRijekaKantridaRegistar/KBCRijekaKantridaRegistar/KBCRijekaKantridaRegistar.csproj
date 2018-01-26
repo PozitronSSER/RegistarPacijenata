@@ -52,6 +52,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Pacijent.cs" />
+    <Compile Include="Pregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pregled.Designer.cs">
+      <DependentUpon>Pregled.cs</DependentUpon>
+    </Compile>
     <Compile Include="PregledPodataka.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pregled.resx">
+      <DependentUpon>Pregled.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PregledPodataka.resx">
       <DependentUpon>PregledPodataka.cs</DependentUpon>
