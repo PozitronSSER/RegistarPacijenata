@@ -148,6 +148,53 @@ namespace KBCRijekaKantridaRegistar
 
 
 
+                //PROVJERA CONVERTOVA
+                try
+                {
+                    gestacijskaDobTjedana = Convert.ToInt32(txtGestacijskadobTjedana.Text);
+                }
+                catch (Exception s)
+                {
+                    MessageBox.Show("Gestacijska dob tjedni ne može sadržavati slova.");
+                    goto Kraj;
+                }
+                try
+                {
+                    gestacijskaDobDana = Convert.ToInt32(txtGestacijskadobDana.Text);
+                }
+                catch (Exception s)
+                {
+                    MessageBox.Show("Gestacijska dob dani ne može sadržavati slova.");
+                    goto Kraj;
+                }
+                try
+                {
+                    rodnaMasa = Convert.ToInt32(txtNovorodenceRodnamasa.Text);
+                }
+                catch (Exception s)
+                {
+                    MessageBox.Show("Rodna masa ne može sadržavati slova.");
+                    goto Kraj;
+                }
+                try
+                {
+                    rodnaDuljina = Convert.ToInt32(txtNovorodenceRodnaduljina.Text);
+                }
+                catch (Exception s)
+                {
+                    MessageBox.Show("Rodna duljina ne može sadržavati slova.");
+                    goto Kraj;
+                }
+                try
+                {
+                    opsegGlave = Convert.ToInt32(txtNovorodenceOpsegglave.Text);
+                }
+                catch (Exception s)
+                {
+                    MessageBox.Show("Opseg glave ne može sadržavati slova.");
+                    goto Kraj;
+                }
+
 
 
                 //Dodjela vrijednosti prijelaznim varijablama
