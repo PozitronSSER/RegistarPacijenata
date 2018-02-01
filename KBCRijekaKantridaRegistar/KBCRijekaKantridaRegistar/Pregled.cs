@@ -21,10 +21,11 @@ namespace KBCRijekaKantridaRegistar
 
         private void button1_Click(object sender, EventArgs e)
         {
+            int i = 0;
             string da = "";
             XDocument doc = XDocument.Load("Registar.xml");
             var pacijenti = from pacijent in doc.Root.Elements("Pacijent")
-                            where pacijent.Element("Prezime").Value.Equals(textBox1.Text)
+                            where pacijent.Element("Prezime").Value.Equals(txtPrezime.Text) where pacijent.Element("Ime").Value.Equals(txtIme.Text)
                             select pacijent;
             foreach(object a in pacijenti)
             {
@@ -33,10 +34,14 @@ namespace KBCRijekaKantridaRegistar
                 output = output.Replace('<',' ');
                 output = output.Replace(">",": ");
                 output = output.Replace("Pacijent:", "");
-                MessageBox.Show(output);
-
+               
+                MessageBox.Show(output,"Pacijent");
+                i++;
             }
-           
+           if(i<=0)
+            {
+                MessageBox.Show("Pacijent nije pronađen.", "Neuspjela pretraga");
+            }
             
         }
     }

@@ -94,7 +94,6 @@ C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijek
 C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\bin\Debug\KBCRijekaKantridaRegistar.exe
 C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\bin\Debug\KBCRijekaKantridaRegistar.pdb
 C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.csprojResolveAssemblyReference.cache
-C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.Form1.resources
 C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.Pregled.resources
 C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.PregledPodataka.resources
 C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.Properties.Resources.resources
@@ -102,3 +101,4 @@ C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijek
 C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.csproj.CoreCompileInputs.cache
 C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.exe
 C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.pdb
+C:\Users\Karlo\Documents\Visual Studio 2017\Projects\RegistarPacijenata\KBCRijekaKantridaRegistar\KBCRijekaKantridaRegistar\obj\Debug\KBCRijekaKantridaRegistar.FormaZaUnos.resources

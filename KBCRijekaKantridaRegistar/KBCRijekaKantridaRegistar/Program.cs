@@ -16,7 +16,7 @@ namespace KBCRijekaKantridaRegistar
             Application.SetCompatibleTextRenderingDefault(false);
 
            //pokretanje forme za unos
-            Application.Run(new Form1());
+            Application.Run(new FormaZaUnos());
 
         }
     }
